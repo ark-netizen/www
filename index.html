@@ -3,19 +3,389 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>idealwhy</title>
+  <meta name="description" content="박수아의 개인 홈페이지. 엔터테인먼트 사업 경험과 데이터, AI 제품 구현을 연결합니다." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="박수아 | idealwhy" />
+  <meta property="og:description" content="왜 필요한지부터 묻고, 실제로 작동하는 것까지 만드는 사람." />
+  <meta property="og:url" content="https://www.idealwhy.com" />
+  <title>박수아 | idealwhy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    html,body{height:100%;margin:0}
-    body{display:grid;place-items:center;font-family:Arial,sans-serif;background:#f6f6f6;color:#111}
-    main{text-align:center}
-    h1{font-size:48px;margin:0 0 12px}
-    p{margin:0;color:#666}
+    :root{
+      --bg:#f5f3ec;
+      --paper:#fffdf8;
+      --ink:#191a17;
+      --muted:#6c7068;
+      --line:#d9d8cf;
+      --green:#2f5d45;
+      --green-2:#dfe9df;
+      --lime:#d8ef78;
+      --orange:#ee7a3b;
+      --max:1160px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--ink);
+      font-family:"DM Sans","Noto Sans KR",sans-serif;
+      line-height:1.6;
+      word-break:keep-all;
+    }
+    a{color:inherit;text-decoration:none}
+    button{font:inherit}
+    .wrap{width:min(calc(100% - 40px),var(--max));margin:0 auto}
+    .nav{
+      position:sticky;top:0;z-index:20;
+      border-bottom:1px solid rgba(25,26,23,.12);
+      background:rgba(245,243,236,.86);
+      backdrop-filter:blur(14px);
+    }
+    .nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{font-weight:700;letter-spacing:-.04em;font-size:21px}
+    .brand span{color:var(--green)}
+    .nav-links{display:flex;gap:28px;color:#55594f;font-size:14px}
+    .nav-links a:hover{color:var(--ink)}
+
+    .hero{padding:108px 0 94px;border-bottom:1px solid var(--line);overflow:hidden;position:relative}
+    .hero:after{
+      content:"WHY";
+      position:absolute;right:-20px;bottom:-100px;
+      font-weight:700;font-size:260px;line-height:1;
+      letter-spacing:-.09em;color:rgba(47,93,69,.055);pointer-events:none
+    }
+    .eyebrow{display:flex;align-items:center;gap:10px;font-size:13px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--green)}
+    .eyebrow:before{content:"";display:block;width:35px;height:2px;background:var(--green)}
+    .hero h1{font-size:clamp(52px,8.2vw,108px);line-height:.98;letter-spacing:-.075em;margin:23px 0 30px;max-width:1050px}
+    .hero h1 .accent{color:var(--green)}
+    .hero-bottom{display:grid;grid-template-columns:1.2fr .8fr;gap:70px;align-items:end}
+    .hero-copy{font-size:clamp(19px,2vw,26px);line-height:1.55;letter-spacing:-.03em;max-width:730px}
+    .hero-copy strong{background:linear-gradient(transparent 62%,var(--lime) 62%);font-weight:600}
+    .hero-meta{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .mini-stat{border-top:1px solid var(--ink);padding-top:14px}
+    .mini-stat b{font-size:27px;letter-spacing:-.04em;display:block}
+    .mini-stat span{font-size:13px;color:var(--muted)}
+
+    section{padding:96px 0;border-bottom:1px solid var(--line)}
+    .section-head{display:grid;grid-template-columns:240px 1fr;gap:50px;margin-bottom:56px}
+    .section-no{font-size:12px;color:var(--green);font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding-top:10px}
+    .section-title{font-size:clamp(36px,5vw,64px);line-height:1.06;letter-spacing:-.055em;margin:0}
+    .section-lead{font-size:18px;color:var(--muted);max-width:740px;margin-top:18px}
+
+    .identity-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .identity-card{min-height:270px;background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:30px;display:flex;flex-direction:column;justify-content:space-between}
+    .identity-card .num{font-size:13px;color:var(--muted)}
+    .identity-card h3{font-size:28px;letter-spacing:-.045em;margin:40px 0 10px}
+    .identity-card p{margin:0;color:var(--muted);font-size:15px}
+    .identity-card.featured{background:var(--green);color:#fff;border-color:var(--green)}
+    .identity-card.featured p,.identity-card.featured .num{color:rgba(255,255,255,.72)}
+
+    .workmate{background:#17271e;color:#f5f3ec;position:relative;overflow:hidden}
+    .workmate:before{content:"";width:520px;height:520px;border-radius:50%;position:absolute;right:-170px;top:-150px;background:rgba(216,239,120,.11)}
+    .workmate .section-no{color:var(--lime)}
+    .workmate .section-lead{color:rgba(245,243,236,.64)}
+    .wm-intro{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;margin-bottom:52px}
+    .quote{font-size:clamp(29px,4vw,50px);line-height:1.22;letter-spacing:-.055em;margin:0}
+    .quote em{font-style:normal;color:var(--lime)}
+    .origin{border-left:1px solid rgba(255,255,255,.22);padding-left:30px;color:rgba(245,243,236,.74);font-size:17px}
+    .origin strong{color:#fff}
+    .wm-flow{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:54px 0 24px}
+    .flow-step{border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:20px 17px;min-height:145px;background:rgba(255,255,255,.035)}
+    .flow-step b{display:block;color:var(--lime);font-size:12px;margin-bottom:26px;letter-spacing:.08em}
+    .flow-step span{font-size:16px;font-weight:600;line-height:1.45}
+    .wm-details{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+    .wm-card{border:1px solid rgba(255,255,255,.18);border-radius:20px;padding:28px;background:rgba(255,255,255,.04)}
+    .wm-card h3{margin:0 0 14px;font-size:20px;color:#fff}
+    .wm-card p{margin:0;color:rgba(245,243,236,.65);font-size:15px}
+    .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+    .chip{font-size:12px;border:1px solid rgba(255,255,255,.2);padding:7px 10px;border-radius:99px;color:rgba(255,255,255,.82)}
+    .wm-actions{display:flex;gap:12px;margin-top:26px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:99px;padding:12px 18px;font-size:14px;font-weight:700;border:1px solid transparent;transition:.2s ease}
+    .btn-light{background:var(--lime);color:#17271e}
+    .btn-light:hover{transform:translateY(-2px)}
+    .btn-ghost{border-color:rgba(255,255,255,.25);color:#fff}
+
+    .outcomes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .outcome{padding:30px;border-top:2px solid var(--ink);background:rgba(255,255,255,.26)}
+    .outcome .big{font-size:48px;letter-spacing:-.06em;font-weight:700;color:var(--green);margin-bottom:8px}
+    .outcome h3{font-size:18px;margin:0 0 8px}
+    .outcome p{font-size:14px;color:var(--muted);margin:0}
+
+    .timeline{display:grid;gap:0}
+    .career{display:grid;grid-template-columns:170px 1fr 1.2fr;gap:32px;padding:28px 0;border-top:1px solid var(--line)}
+    .career:last-child{border-bottom:1px solid var(--line)}
+    .career time{font-size:13px;color:var(--muted)}
+    .career h3{margin:0;font-size:20px;letter-spacing:-.03em}
+    .career h4{margin:5px 0 0;font-weight:500;color:var(--green)}
+    .career p{margin:0;color:var(--muted);font-size:15px}
+
+    .profile-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:50px}
+    .profile-name{font-size:44px;letter-spacing:-.06em;margin:0 0 12px}
+    .profile-role{color:var(--green);font-weight:600;margin-bottom:28px}
+    .facts{display:grid;gap:0;border-top:1px solid var(--line)}
+    .fact{display:grid;grid-template-columns:120px 1fr;padding:14px 0;border-bottom:1px solid var(--line);font-size:14px}
+    .fact span:first-child{color:var(--muted)}
+    .skill-groups{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .skill-group{background:var(--paper);border:1px solid var(--line);padding:24px;border-radius:18px}
+    .skill-group h3{font-size:15px;margin:0 0 14px;color:var(--green)}
+    .skill-group p{margin:0;font-size:15px;line-height:1.9}
+
+    .contact{padding:100px 0 120px}
+    .contact-box{background:var(--orange);color:#1d1713;border-radius:30px;padding:50px;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:end}
+    .contact-box h2{font-size:clamp(42px,6vw,75px);line-height:1.02;letter-spacing:-.06em;margin:0}
+    .contact-box p{margin:15px 0 0;max-width:570px}
+    .contact-links{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+    .contact-link{display:inline-flex;border-bottom:1px solid rgba(29,23,19,.5);font-weight:700;padding-bottom:3px}
+    footer{padding:28px 0 46px;font-size:12px;color:var(--muted);display:flex;justify-content:space-between}
+
+    @media(max-width:900px){
+      .nav-links{display:none}
+      .hero{padding-top:76px}
+      .hero-bottom,.section-head,.wm-intro,.profile-grid,.contact-box{grid-template-columns:1fr}
+      .hero-meta{max-width:430px}
+      .section-head{gap:12px}
+      .identity-grid,.outcomes{grid-template-columns:1fr}
+      .wm-flow{grid-template-columns:1fr 1fr}
+      .wm-details,.skill-groups{grid-template-columns:1fr}
+      .career{grid-template-columns:1fr;gap:8px}
+      .contact-links{margin-top:15px}
+    }
+    @media(max-width:560px){
+      .wrap{width:min(calc(100% - 28px),var(--max))}
+      .nav-inner{height:62px}
+      .hero{padding:64px 0 68px}
+      .hero h1{font-size:52px}
+      section{padding:70px 0}
+      .wm-flow{grid-template-columns:1fr}
+      .hero-meta{grid-template-columns:1fr 1fr}
+      .contact-box{padding:30px 24px;border-radius:22px}
+      .fact{grid-template-columns:95px 1fr}
+    }
   </style>
 </head>
 <body>
-  <main>
-    <h1>idealwhy</h1>
-    <p>www.idealwhy.com is connected.</p>
+  <nav class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top">ideal<span>why</span>.</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#workmate">WorkMate English</a>
+        <a href="#experience">Experience</a>
+        <a href="#profile">Profile</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="top">
+    <header class="hero">
+      <div class="wrap">
+        <div class="eyebrow">Park Sua · Product / Business</div>
+        <h1>왜 필요한지부터 묻고,<br><span class="accent">실제로 작동하는 것</span>까지 만듭니다.</h1>
+        <div class="hero-bottom">
+          <p class="hero-copy">
+            안녕하세요, 박수아입니다. 엔터테인먼트 사업 현장에서 콘텐츠를 기획하고 계약·유통·프로모션까지 운영했고, 이후 데이터와 AI를 공부하며 <strong>발견한 문제를 직접 제품으로 구현하는 방식</strong>으로 영역을 넓혀가고 있습니다.
+          </p>
+          <div class="hero-meta">
+            <div class="mini-stat"><b>2년</b><span>엔터테인먼트 음악 사업</span></div>
+            <div class="mini-stat"><b>230%+</b><span>대표 OST 프로젝트 ROI</span></div>
+            <div class="mini-stat"><b>OPIc AL</b><span>영어 커뮤니케이션</span></div>
+            <div class="mini-stat"><b>4.29</b><span>GPA / 4.5</span></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-no">01 · About</div>
+          <div>
+            <h2 class="section-title">저는 ‘아이디어가 좋은 사람’보다<br>‘이유를 찾아 실행하는 사람’이고 싶습니다.</h2>
+            <p class="section-lead">콘텐츠 사업, 데이터 분석, AI 제품 구현은 겉으로 보면 서로 다른 경험이지만 제게는 같은 방식의 일입니다. 불편함이 생기는 지점을 찾고, 왜 그런지 구조를 보고, 실제로 바꿀 수 있는 형태까지 연결합니다.</p>
+          </div>
+        </div>
+
+        <div class="identity-grid">
+          <article class="identity-card featured">
+            <span class="num">01 / BUSINESS</span>
+            <div>
+              <h3>사업의 끝까지 봅니다.</h3>
+              <p>기획만 하는 것이 아니라 계약, 제작, 유통, 프로모션, 정산까지 이어지는 전체 흐름을 경험했습니다.</p>
+            </div>
+          </article>
+          <article class="identity-card">
+            <span class="num">02 / DATA</span>
+            <div>
+              <h3>감보다 근거를 찾습니다.</h3>
+              <p>신문방송학과 소셜데이터사이언스를 함께 전공했고, Python·SQL과 데이터 자격을 통해 판단을 수치로 검증하는 방식을 익혔습니다.</p>
+            </div>
+          </article>
+          <article class="identity-card">
+            <span class="num">03 / BUILD</span>
+            <div>
+              <h3>가능하면 직접 만들어봅니다.</h3>
+              <p>아이디어를 문서에서 끝내지 않고 웹서비스로 구현하며 AI, DB, 상태 설계, 배포와 운영의 제약까지 제품 관점에서 확인합니다.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="workmate" id="workmate">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-no">02 · Featured Build</div>
+          <div>
+            <h2 class="section-title">WorkMate English</h2>
+            <p class="section-lead">업무 알림처럼 도착하는 AI 비즈니스 영어 트레이닝. “영어 공부를 하러 들어가는 앱”이 아니라, “영어를 쓰는 하루”를 만들고 싶었습니다.</p>
+          </div>
+        </div>
+
+        <div class="wm-intro">
+          <p class="quote">영어가 필요했던 순간과<br><em>공부할 수 있었던 순간이 달랐습니다.</em></p>
+          <div class="origin">
+            직장에서 영어가 필요하다는 압박은 분명했지만, 퇴근 후 다시 ‘공부 모드’로 들어가는 일은 또 하나의 업무처럼 느껴졌습니다. 기존 영어 학습에서는 비슷한 표현을 반복해서 외워도 실제 회사에서 <strong>동료, 상사, 거래처에게 어떻게 말해야 하는지</strong>가 바로 연결되지 않았습니다.<br><br>
+            그래서 문제를 “공부량 부족”이 아니라 <strong>업무 맥락과 학습이 분리되어 있다는 것</strong>으로 정의했습니다.
+          </div>
+        </div>
+
+        <div class="wm-flow" aria-label="WorkMate English 하루 흐름">
+          <div class="flow-step"><b>STEP 01</b><span>가상 회사에<br>출근합니다.</span></div>
+          <div class="flow-step"><b>STEP 02</b><span>동료·상사·거래처의<br>업무 연락이 옵니다.</span></div>
+          <div class="flow-step"><b>STEP 03</b><span>필요하면 힌트를 보고<br>영어로 답합니다.</span></div>
+          <div class="flow-step"><b>STEP 04</b><span>AI의 후속 반응으로<br>대화가 이어집니다.</span></div>
+          <div class="flow-step"><b>STEP 05</b><span>퇴근 후 리포트로<br>표현을 복습합니다.</span></div>
+        </div>
+
+        <div class="wm-details">
+          <article class="wm-card">
+            <h3>문제를 푸는 앱이 아니라, 영어로 일하는 환경</h3>
+            <p>온보딩에서 직무와 업무를 설정하고, 관계별 메시지를 받으며 실제 회사생활처럼 하루를 보냅니다. 출근·연차·외근·직급·승진 같은 상태도 학습 루틴의 일부로 설계했습니다.</p>
+            <div class="chips">
+              <span class="chip">Role-based messages</span>
+              <span class="chip">3-step hints</span>
+              <span class="chip">Daily reports</span>
+              <span class="chip">Attendance & promotion</span>
+            </div>
+          </article>
+          <article class="wm-card">
+            <h3>학습을 강제하기보다, 사용자의 하루를 고려하는 AI</h3>
+            <p>바쁘면 ‘외근 중’으로 연락을 미루고 다시 알림을 받을 수 있습니다. 학습할 여유가 없는 날도 서비스가 사용자를 몰아붙이지 않도록, 상태와 감정을 제품 경험에 반영했습니다.</p>
+            <div class="chips">
+              <span class="chip">React</span>
+              <span class="chip">TypeScript</span>
+              <span class="chip">Supabase</span>
+              <span class="chip">Upstage Solar LLM</span>
+              <span class="chip">Vercel</span>
+            </div>
+            <div class="wm-actions">
+              <a class="btn btn-light" href="https://github.com/ark-netizen/workmate-english" target="_blank" rel="noreferrer">GitHub 보기 ↗</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-no">03 · Outcomes</div>
+          <div>
+            <h2 class="section-title">기획의 가치는<br>결과가 나올 때 선명해진다고 생각합니다.</h2>
+            <p class="section-lead">KBS미디어 음악 사업 실무에서 IP와 팬 반응, 유통 구조를 연결해 실제 매출과 회수 성과를 만들었습니다.</p>
+          </div>
+        </div>
+
+        <div class="outcomes">
+          <article class="outcome">
+            <div class="big">230%</div>
+            <h3>드라마 IP 리메이크 OST</h3>
+            <p>저작권 계약부터 앨범 제작, 프로모션과 팬 이벤트 PM까지 전 과정을 담당했습니다.</p>
+          </article>
+          <article class="outcome">
+            <div class="big">310%</div>
+            <h3>OST & 오디오 드라마 사업</h3>
+            <p>음원 유통, 프로모션, 플레이리스트 피칭과 방송 심의까지 직접 진행했습니다.</p>
+          </article>
+          <article class="outcome">
+            <div class="big">1,100+</div>
+            <h3>음반 발매 & 유통 기반 확대</h3>
+            <p>대규모 음반 발매와 음원 유통 제휴 홈페이지 기획·제작을 주도했습니다.</p>
+          </article>
+        </div>
+
+        <div class="timeline" style="margin-top:72px">
+          <article class="career">
+            <time>2026.01 — 2026.04</time>
+            <div><h3>퍼포먼스 마케터</h3><h4>엔터테인먼트 마케팅</h4></div>
+            <p>K-pop 아이돌 대상 Google/Meta 광고 세팅, 미디어믹스 구성, 캠페인 성과 리포트와 콘텐츠별 효율 분석.</p>
+          </article>
+          <article class="career">
+            <time>2022.10 — 2024.10</time>
+            <div><h3>음악사업 담당</h3><h4>KBS미디어 · 2년</h4></div>
+            <p>드라마·예능 IP 기반 앨범 기획·발매·유통, 권리 계약, 정산, 프로모션, 신규 거래처 발굴과 제휴 홈페이지 구축.</p>
+          </article>
+          <article class="career">
+            <time>2019 — 2022</time>
+            <div><h3>콘텐츠 자문 · 미디어 교육</h3><h4>콘텐츠 / 교육 프로젝트</h4></div>
+            <p>20대 콘텐츠 트렌드 자문과 미디어 교육 보조강사 경험을 통해 이용자 관점의 콘텐츠 감각과 현장 커뮤니케이션을 익혔습니다.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="profile">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-no">04 · Profile</div>
+          <div>
+            <h2 class="section-title">콘텐츠와 사업을 이해하고,<br>데이터와 기술로 확장합니다.</h2>
+          </div>
+        </div>
+
+        <div class="profile-grid">
+          <div>
+            <h3 class="profile-name">박수아</h3>
+            <div class="profile-role">Product · Business · AI</div>
+            <div class="facts">
+              <div class="fact"><span>전공</span><span>신문방송학 · 소셜데이터사이언스</span></div>
+              <div class="fact"><span>학점</span><span>4.29 / 4.5</span></div>
+              <div class="fact"><span>영어</span><span>OPIc AL</span></div>
+              <div class="fact"><span>GitHub</span><span><a href="https://github.com/ark-netizen" target="_blank" rel="noreferrer">ark-netizen ↗</a></span></div>
+            </div>
+          </div>
+          <div class="skill-groups">
+            <article class="skill-group"><h3>PRODUCT / AI</h3><p>서비스 구조 설계 · LLM 활용 · 프롬프트 설계 · 상태/루틴 설계 · MVP 구현</p></article>
+            <article class="skill-group"><h3>DATA</h3><p>Python · SQL · 빅데이터분석기사 · SQLD · ADsP · 성과 분석</p></article>
+            <article class="skill-group"><h3>BUSINESS / CONTENT</h3><p>음악 사업 · IP 활용 · 앨범 기획/발매 · 음원 유통 · 프로모션 · 파트너 협업</p></article>
+            <article class="skill-group"><h3>RIGHTS / OPERATIONS</h3><p>음악 저작권 · 계약 협상 · 정산 · 플랫폼 협업 · 프로젝트 운영</p></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap">
+        <div class="contact-box">
+          <div>
+            <h2>좋은 질문은<br>좋은 제품의 시작이라고 믿습니다.</h2>
+            <p>새로운 서비스, 사업, AI 제품에 관한 이야기라면 편하게 연락해주세요.</p>
+          </div>
+          <div class="contact-links">
+            <a class="contact-link" href="mailto:ark230015@gmail.com">ark230015@gmail.com ↗</a>
+            <a class="contact-link" href="https://github.com/ark-netizen" target="_blank" rel="noreferrer">github.com/ark-netizen ↗</a>
+          </div>
+        </div>
+        <footer>
+          <span>© 2026 Park Sua</span>
+          <span>idealwhy.com</span>
+        </footer>
+      </div>
+    </section>
   </main>
 </body>
 </html>
