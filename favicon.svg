@@ -1,9 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="idealwhy favicon">
-  <rect width="64" height="64" rx="15" fill="#FBF9F4"/>
-  <path d="M17 20h10v29H17z" fill="#11110E"/>
-  <rect x="17" y="10" width="10" height="7" rx="3.5" fill="#11110E"/>
-  <path d="M36.5 18.2c1.6-4.8 6-7.7 11.5-7.7 7.5 0 12.7 4.3 12.7 10.8 0 5-2.6 7.7-6.5 10.1-3.4 2.1-4.7 3.5-4.7 7v1.3h-8.9v-2.2c0-5 2-8.1 6.4-10.8 3.1-2 4.6-3.3 4.6-5.6 0-2.1-1.6-3.6-4.1-3.6-2.7 0-4.4 1.5-5.3 4.2l-5.7-3.5Z" fill="#3157FF"/>
-  <circle cx="45" cy="49" r="5" fill="#3157FF"/>
-  <path d="M35 30h22" stroke="#3157FF" stroke-width="2.4" stroke-linecap="square" opacity=".28"/>
-  <path d="M38 32h18" stroke="#9CB338" stroke-width="1.7" stroke-linecap="square" opacity=".34"/>
+  <defs>
+    <filter id="s" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="1.4" stdDeviation="1.8" flood-color="#11110e" flood-opacity=".12"/>
+    </filter>
+  </defs>
+  <rect x="3" y="3" width="58" height="58" rx="14" fill="#fff" filter="url(#s)"/>
+  <text x="8" y="29" fill="#11110e" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="800" letter-spacing="-1.7">ideal</text>
+  <text x="7" y="51" fill="#2255f5" font-family="Arial,Helvetica,sans-serif" font-size="23" font-weight="800" letter-spacing="-1.6">why?</text>
 </svg>
