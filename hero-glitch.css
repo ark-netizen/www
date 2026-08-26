@@ -1,1 +1,18 @@
-.brand{position:relative;isolation:isolate}.brand::before,.brand::after{content:"idealwhy?";position:absolute;inset:0;pointer-events:none;font:inherit;letter-spacing:inherit;white-space:nowrap;opacity:0}.brand::before{color:#3157ff;z-index:-1;clip-path:inset(18% 0 62% 0);transform:translateX(8px)}.brand::after{color:#11110e;z-index:-2;clip-path:inset(58% 0 18% 0);transform:translateX(-7px)}.brand.glitch-once::before{animation:heroSliceA .85s 1.6s steps(2,end) 1}.brand.glitch-once::after{animation:heroSliceB .85s 1.6s steps(2,end) 1}.brand:hover::before{animation:heroSliceA .48s steps(2,end) 1}.brand:hover::after{animation:heroSliceB .48s steps(2,end) 1}.brand .why{position:relative}.brand .why::before,.brand .why::after{opacity:1!important}.brand .why::before{clip-path:inset(28% 0 48% 0)!important;transform:translateX(5px)!important}.brand .why::after{clip-path:inset(62% 0 12% 0)!important;transform:translateX(-4px)!important}.brand .q{filter:drop-shadow(2px 0 0 rgba(49,87,255,.25))}@keyframes heroSliceA{0%,100%{opacity:0;transform:translateX(8px)}16%{opacity:.45;transform:translate(12px,-2px)}32%{opacity:0}48%{opacity:.3;clip-path:inset(44% 0 37% 0);transform:translate(-5px,1px)}64%{opacity:.18;clip-path:inset(72% 0 9% 0);transform:translate(10px,0)}82%{opacity:0}}@keyframes heroSliceB{0%,100%{opacity:0;transform:translateX(-7px)}20%{opacity:.26;transform:translate(-11px,2px)}38%{opacity:0}56%{opacity:.2;clip-path:inset(22% 0 61% 0);transform:translate(5px,-1px)}72%{opacity:.15;clip-path:inset(67% 0 14% 0);transform:translate(-9px,0)}88%{opacity:0}}@media(prefers-reduced-motion:reduce){.brand::before,.brand::after{animation:none!important;opacity:0!important}}
+/* Glitch effect intentionally disabled. Keep the wordmark clean. */
+.logo::before,
+.logo::after,
+.logo i::after,
+.brand::before,
+.brand::after,
+.brand .why::before,
+.brand .why::after,
+.brand .q::after{
+  content:none!important;
+  display:none!important;
+  animation:none!important;
+  opacity:0!important;
+}
+.brand .q{
+  filter:none!important;
+  text-shadow:none!important;
+}
