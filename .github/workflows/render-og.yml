@@ -1,0 +1,38 @@
+name: Render OG image
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'og-idealwhy.svg'
+      - '.github/workflows/render-og.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  render-og:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install SVG renderer
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y librsvg2-bin
+
+      - name: Render 1200x630 PNG
+        run: rsvg-convert -w 1200 -h 630 og-idealwhy.svg -o og-idealwhy.png
+
+      - name: Commit rendered image
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add og-idealwhy.png
+          if git diff --cached --quiet; then
+            echo "No OG image changes"
+          else
+            git commit -m "Render OG preview image"
+            git push
+          fi
