@@ -39,6 +39,14 @@
       return;
     }
 
+    if (href.includes("insightmate.idealwhy.com")) {
+      track("project_click", {
+        project_name: "insightmate",
+        click_area: "text_link",
+      });
+      return;
+    }
+
     if (href.startsWith("mailto:")) {
       track("contact_click", { channel: "email" });
       return;
