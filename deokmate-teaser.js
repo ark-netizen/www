@@ -32,7 +32,7 @@
   teaser.className='deokmate-teaser reveal';
   teaser.innerHTML=`
     <div>
-      <div class="tag">Experiment 003 · Deokmate</div>
+      <div class="tag">Experiment 004 · Deokmate</div>
       <h3>Deok<br>mate</h3>
       <div class="deokmate-status">In development</div>
     </div>

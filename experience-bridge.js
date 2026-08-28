@@ -38,6 +38,6 @@
   const rows=[...document.querySelectorAll('#maker .erow')];
   if(rows[2]){
     const p=rows[2].querySelector('p');
-    if(p)p.textContent='WorkMate English, 흘려보내요, Deokmate 등 개인 제품을 기획하고 직접 구현.';
+    if(p)p.textContent='WorkMate English, 흘려보내요, InsightMate, Deokmate 등 개인 제품을 기획하고 직접 구현.';
   }
 })();

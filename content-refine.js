@@ -126,7 +126,7 @@
     '만든 뒤의 반응을 보고 다시 질문하고 고칩니다.'
   ].forEach((t,i)=>{if(rules[i])rules[i].textContent=t;});
 
-  setHTML('#works .workshead .lead','WorkMate English와 흘려보내요는 같은 방식으로 시작했습니다.<br class="desktop-br">익숙한 해결법을 한 번 더 의심하고,<br class="desktop-br">질문을 실제로 써볼 수 있는 경험으로 바꿨습니다.');
+  setHTML('#works .workshead .lead','WorkMate English, 흘려보내요, InsightMate는 같은 방식으로 시작했습니다.<br class="desktop-br">익숙한 해결법을 한 번 더 의심하고,<br class="desktop-br">질문을 실제로 써볼 수 있는 경험으로 바꿨습니다.');
 
   /* WorkMate English */
   const works=[...document.querySelectorAll('#works .work')];
@@ -202,7 +202,7 @@
   const rows=[...document.querySelectorAll('#maker .erow')];
   if(rows[0])setText('p','음악사업 기획·유통·프로모션·제휴 운영. 대표 프로젝트 ROI 230%, 회수율 310%.',rows[0]);
   if(rows[1])setText('p','K-pop 캠페인 Google·Meta 광고 운영, 성과 분석 및 리포팅.',rows[1]);
-  if(rows[2])setText('p','WorkMate English와 흘려보내요 등 개인 제품을 기획하고 직접 구현.',rows[2]);
+  if(rows[2])setText('p','WorkMate English, 흘려보내요, InsightMate 등 개인 제품을 기획하고 직접 구현.',rows[2]);
 
   setHTML('.contact p','질문을 던지고, 직접 만들고,<br class="desktop-br">반응을 보고 다시 고칩니다.<br class="desktop-br">idealwhy는 그 과정을 계속 기록하는 공간입니다.');
 })();

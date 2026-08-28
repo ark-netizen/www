@@ -75,9 +75,10 @@
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
         const article = entry.target;
+        const dataProject = article.dataset.project || "";
         const hasWorkMate = !!article.querySelector('a[href*="enmate.co.kr"]');
         const hasLetItFlow = !!article.querySelector('a[href^="intoss://let-it-flow"]');
-        const projectName = hasWorkMate ? "workmate_english" : hasLetItFlow ? "let_it_flow" : "unknown";
+        const projectName = dataProject || (hasWorkMate ? "workmate_english" : hasLetItFlow ? "let_it_flow" : "unknown");
         if (projectName !== "unknown") {
           trackOnce(`project:${projectName}`, "project_view", { project_name: projectName });
         }
