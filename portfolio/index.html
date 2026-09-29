@@ -67,10 +67,11 @@ section{padding:100px 0;border-bottom:1px solid var(--line)}
 .project-question strong{color:var(--blue)}
 .preview{margin-top:46px;display:grid;grid-template-columns:1.1fr .9fr;gap:46px;align-items:center;border-top:1px solid;border-bottom:1px solid;padding:34px 0}
 .preview img{width:100%;border:1px solid var(--line);background:#fff}
-.monitor{padding:10px;background:#10151d;border-radius:18px;box-shadow:0 20px 50px #11110e20}
-.monitor img{border:0;border-radius:8px}
-.phone{width:min(300px,100%);margin:auto;padding:9px;background:#10151d;border-radius:38px;box-shadow:0 20px 50px #11110e20}
-.phone img{border:0;border-radius:30px}
+.monitor{position:relative;padding:10px 10px 16px;background:#10151d;border-radius:18px;box-shadow:0 20px 50px #11110e20;margin-bottom:42px}
+.monitor img{display:block;width:100%;border:0;border-radius:8px;background:#fff}
+.monitor::after{content:"";position:absolute;left:50%;bottom:-28px;transform:translateX(-50%);width:92px;height:28px;background:linear-gradient(180deg,#222b36 0%,#10151d 100%);clip-path:polygon(36% 0,64% 0,76% 100%,24% 100%)}
+.monitor::before{content:"";position:absolute;left:50%;bottom:-36px;transform:translateX(-50%);width:150px;height:8px;border-radius:999px;background:#10151d;box-shadow:0 8px 18px #11110e22}
+.monitor.flow-monitor img{aspect-ratio:16/9;object-fit:contain;background:#ece9e1}
 .preview-copy h4{font-size:26px;line-height:1.35;letter-spacing:-.035em;margin:0 0 12px}
 .preview-copy p{font-size:14px;color:var(--muted);margin:0}
 .detail-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid;margin-top:52px}
@@ -260,7 +261,7 @@ section{padding:100px 0;border-bottom:1px solid var(--line)}
     </div>
 
     <div class="preview">
-      <div class="phone"><img src="https://www.idealwhy.com/assets/flow-real-service.jpg" alt="Let It Flow 토스 인앱 실제 화면"></div>
+      <div class="monitor flow-monitor"><img src="https://www.idealwhy.com/assets/flow-real-service.jpg" alt="Let It Flow 토스 인앱 실제 화면"></div>
       <div class="preview-copy">
         <h4>감정을 삭제하는 대신 ‘흘려두는’ 인터랙션을 만들었습니다.</h4>
         <p>모래 위에 마음을 쓰면 파도가 글씨를 지우고 해파리가 가져갑니다. 이후 ‘나의 바다’에서 그 마음이 계속 여행하고 있다는 소식을 받는 구조로, 사용자가 감정을 붙들고 반복해서 분석하지 않아도 시간의 흐름을 느끼게 설계했습니다.</p>
