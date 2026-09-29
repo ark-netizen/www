@@ -69,11 +69,12 @@ section{padding:100px 0;border-bottom:1px solid var(--line)}
 .preview img{width:100%;border:1px solid var(--line);background:#fff}
 .monitor{position:relative;width:min(500px,100%);margin:0 auto 42px;padding:10px 10px 16px;background:#10151d;border-radius:18px;box-shadow:0 20px 50px #11110e20}
 .monitor img{display:block;width:100%;height:auto;border:0;border-radius:8px;background:#fff}
+.insight-monitor img{aspect-ratio:1440/805;object-fit:cover;object-position:top}
 .monitor::after{content:"";position:absolute;left:50%;bottom:-28px;transform:translateX(-50%);width:92px;height:28px;background:linear-gradient(180deg,#222b36 0%,#10151d 100%);clip-path:polygon(36% 0,64% 0,76% 100%,24% 100%)}
 .monitor::before{content:"";position:absolute;left:50%;bottom:-36px;transform:translateX(-50%);width:150px;height:8px;border-radius:999px;background:#10151d;box-shadow:0 8px 18px #11110e22}
-.phone{position:relative;width:min(278px,100%);height:510px;margin:0 auto 20px;padding:12px 10px 14px;background:#10151d;border-radius:40px;box-shadow:0 20px 50px #11110e20;overflow:hidden}
+.phone{position:relative;width:min(300px,100%);margin:0 auto 20px;padding:10px;background:#10151d;border-radius:44px;box-shadow:0 20px 50px #11110e20}
 .phone::before{content:"";position:absolute;top:7px;left:50%;transform:translateX(-50%);width:76px;height:18px;border-radius:999px;background:#080b10;z-index:2}
-.phone img{display:block;width:100%;height:auto;border:0;border-radius:30px;background:#ece9e1;transform:scale(1.23);transform-origin:top center}
+.phone img{display:block;width:100%;height:auto;border:0;border-radius:35px;background:#fff}
 .preview-copy h4{font-size:26px;line-height:1.35;letter-spacing:-.035em;margin:0 0 12px}
 .preview-copy p{font-size:14px;color:var(--muted);margin:0}
 .detail-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid;margin-top:52px}
@@ -214,7 +215,7 @@ section{padding:100px 0;border-bottom:1px solid var(--line)}
     </div>
 
     <div class="preview">
-      <div class="monitor"><img src="https://www.idealwhy.com/assets/insightmate-preview.png" alt="InsightMate 실제 서비스 대시보드"></div>
+      <div class="monitor insight-monitor"><img src="https://www.idealwhy.com/assets/insightmate-preview.png" alt="InsightMate 실제 서비스 대시보드"></div>
       <div class="preview-copy">
         <h4>수집 도구와 해석 도구를 한 흐름으로 묶었습니다.</h4>
         <p>X·YouTube·Instagram에서 계정·게시물·댓글을 구분해 수집하고, 저장된 데이터를 감성·키워드·트렌드·관계망으로 살펴본 뒤 AI에게 질문할 수 있도록 구성했습니다. 분석 결과가 다시 콘텐츠·캠페인 판단으로 이어지는 것을 목표로 했습니다.</p>
