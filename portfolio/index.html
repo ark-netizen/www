@@ -30,6 +30,11 @@ gtag("config","G-F6FELRLPHC",{page_title:"Portfolio · idealwhy"});
 @media(max-width:800px){.wrap{width:calc(100% - 36px)}.nav{display:none}.hero{padding:32px 0 48px}.hero-grid,.project-top,.preview,.section-head,.bridge{grid-template-columns:1fr;gap:28px}.hero h1{font-size:70px}.hero-copy{font-size:25px}.project-index{margin-top:40px}.card-art{height:220px;padding:16px}.card-copy h3{font-size:23px}.card-copy h3 small{display:block;margin:4px 0 0}.project{padding:56px 0}.project-title h3{font-size:44px}.project-question{font-size:25px}.detail-grid,.delivery-grid{grid-template-columns:1fr;gap:24px}.detail-grid{margin-top:36px}.detail p{font-size:14px}.arch-flow{gap:16px}.arch-node{min-width:130px}.tech-row{display:block}.tech-row b{display:block;margin-top:10px}.delivery{padding:48px 0}.delivery h3{font-size:25px}.footer .wrap{display:block}.index-heading>span{display:none}}
 @media(max-width:560px){.project-cards{grid-template-columns:1fr;gap:32px}.card-copy h3 small{display:inline;margin-left:6px}.card-art{height:245px}.card-foot{font-size:10px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card-art{transition:none}}
+
+/* Persistent project navigation and clear chapter starts */
+.project-rail{position:fixed;left:28px;top:120px;width:166px;z-index:25;display:flex;flex-direction:column;gap:6px}.rail-label{font-size:9px;letter-spacing:.12em;color:var(--muted);padding:0 12px 14px}.project-rail a{padding:11px 12px;font-size:12px;color:var(--muted);border-radius:7px;transition:background .15s,color .15s}.project-rail a span{font-size:10px;margin-right:7px;opacity:.6}.project-rail a:hover{background:#eceee8;color:var(--ink)}.project-rail a[aria-current="location"]{background:#e7ecff;color:var(--blue);font-weight:700}.chapter-heading{display:flex;align-items:center;gap:18px;margin-bottom:38px;padding-top:24px;border-top:2px solid #c6cde0}.chapter-heading>span{font-size:38px;line-height:1;color:var(--blue);letter-spacing:-.06em;font-weight:600}.chapter-heading h2{font-size:17px;margin:0;letter-spacing:-.025em}.chapter-heading p{font-size:11px;color:var(--muted);margin:3px 0 0}.project{padding-top:48px}.nav{display:none}
+@media(min-width:1101px){.wrap{width:calc(100% - 274px);max-width:1160px;margin-left:230px;margin-right:44px}.hero-grid{gap:48px}.project-top{gap:48px}.preview{gap:40px}.detail-grid{gap:24px}}
+@media(max-width:1100px){html{scroll-padding-top:142px}.project-rail{position:sticky;top:72px;left:auto;width:100%;flex-direction:row;overflow-x:auto;padding:8px 18px;background:#fbfaf6f5;backdrop-filter:blur(12px);gap:6px;scrollbar-width:thin}.rail-label{display:none}.project-rail a{flex-shrink:0;padding:8px 12px;font-size:11px}.chapter-heading{margin-bottom:30px}.chapter-heading>span{font-size:32px}}
 </style>
 </head>
 <body>
@@ -45,6 +50,7 @@ gtag("config","G-F6FELRLPHC",{page_title:"Portfolio · idealwhy"});
     </nav>
   </div>
 </header>
+<nav class="project-rail" aria-label="포트폴리오 목차"><span class="rail-label">PROJECT INDEX</span><a href="#projects">전체 프로젝트</a><a href="#workmate"><span>01</span> 부캐영어</a><a href="#insightmate"><span>02</span> InsightMate</a><a href="#flow"><span>03</span> Let It Flow</a><a href="#deokmate"><span>04</span> 덕메구해요</a><a href="#delivery">사업 · 협업 경험</a><a href="#background">Background</a></nav>
 
 <main>
 <section class="hero">
@@ -69,7 +75,7 @@ gtag("config","G-F6FELRLPHC",{page_title:"Portfolio · idealwhy"});
 </section>
 
 <section class="project" id="workmate" data-project="workmate_english">
-  <div class="wrap">
+  <div class="wrap"><div class="chapter-heading"><span>01</span><div><h2>부캐영어</h2><p>AI 제품 설계 · 개인 개발 · 장관상 대상</p></div></div>
     <div class="project-top">
       <div class="project-title">
         <div class="eyebrow">01 / 부캐영어 · 개인 프로젝트 · LIVE SERVICE</div>
@@ -119,7 +125,7 @@ gtag("config","G-F6FELRLPHC",{page_title:"Portfolio · idealwhy"});
 </section>
 
 <section class="project" id="insightmate" data-project="insightmate">
-  <div class="wrap">
+  <div class="wrap"><div class="chapter-heading"><span>02</span><div><h2>InsightMate</h2><p>콘텐츠 사업의 문제를 데이터 제품으로</p></div></div>
     <div class="project-top">
       <div class="project-title">
         <div class="eyebrow">02 / FAN DATA · AI ANALYTICS</div>
@@ -171,7 +177,7 @@ gtag("config","G-F6FELRLPHC",{page_title:"Portfolio · idealwhy"});
 <section class="delivery" id="delivery"><div class="wrap"><div class="eyebrow">BUSINESS TO PRODUCT · KBS미디어</div><h3>개발 이후 수개월간 보류된 서비스를,<br>실제 제휴 창구로 출시했습니다.</h3><p>음원 유통 제휴 홈페이지의 필요성을 제안하고 기획자와 함께 구축했습니다. 사업 용어와 신청 절차를 구현 기준으로 설명하고, 개인정보 처리로 출시가 보류된 뒤에는 비용과 운영 대안을 검토하며 관계 부서와 협의했습니다.</p><div class="delivery-grid"><div><h4>사업 요구 구체화</h4><p>제휴 신청에 필요한 정보와 이후 처리 절차를 정리해 기획·개발 담당자와 이해를 맞췄습니다.</p></div><div><h4>도입 조건 조율</h4><p>기획자와 외부 서버 활용을 검토하고 타 팀 운영 비용과 비교했습니다. 수집 항목을 최소화하는 방안과 사업 필요성을 바탕으로 팀장님·법무·경영·기획·개발 담당자들과 협의했습니다.</p></div><div><h4>출시 후 결과</h4><p>사내 최초의 음원 유통 제휴 페이지를 출시했고, 별도 광고 없이 5개월간 20건 이상의 제휴 문의가 유입됐습니다.</p></div></div></div></section>
 
 <section class="project" id="flow" data-project="let_it_flow">
-  <div class="wrap">
+  <div class="wrap"><div class="chapter-heading"><span>03</span><div><h2>Let It Flow</h2><p>참여형 서비스 · 토스 앱 출시</p></div></div>
     <div class="project-top">
       <div class="project-title">
         <div class="eyebrow">03 / INTERACTION · APPS IN TOSS</div>
@@ -211,7 +217,7 @@ gtag("config","G-F6FELRLPHC",{page_title:"Portfolio · idealwhy"});
 </section>
 
 <section class="project" id="deokmate" data-project="deokmate">
-  <div class="wrap">
+  <div class="wrap"><div class="chapter-heading"><span>04</span><div><h2>덕메구해요</h2><p>팬덤을 위한 동행 서비스</p></div></div>
     <div class="project-top">
       <div class="project-title">
         <div class="eyebrow">04 / FANDOM PRODUCT · LIVE SERVICE</div>
@@ -302,6 +308,9 @@ gtag("config","G-F6FELRLPHC",{page_title:"Portfolio · idealwhy"});
   }), {rootMargin:"-20% 0px -55% 0px",threshold:0});
   document.querySelectorAll("section[id]").forEach(el=>io.observe(el));
 })();
+</script>
+<script>
+(()=>{const links=[...document.querySelectorAll('.project-rail a')];const targets=links.map(a=>document.querySelector(a.getAttribute('href')));let scheduled=false;function update(){scheduled=false;const marker=innerWidth<=1100?170:150;let current=0;targets.forEach((el,i)=>{if(el&&el.getBoundingClientRect().top<=marker&&(!targets[current]||el.getBoundingClientRect().top>targets[current].getBoundingClientRect().top))current=i;});const above=targets.map((el,i)=>({i,y:el?.getBoundingClientRect().top??Infinity})).filter(x=>x.y<=marker).sort((a,b)=>b.y-a.y);if(above.length)current=above[0].i;links.forEach((a,i)=>{if(i===current)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});}addEventListener('scroll',()=>{if(!scheduled){scheduled=true;requestAnimationFrame(update)}},{passive:true});addEventListener('resize',update);update();})();
 </script>
 </body>
 </html>
