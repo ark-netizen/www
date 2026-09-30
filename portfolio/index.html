@@ -31,10 +31,9 @@ gtag("config","G-F6FELRLPHC",{page_title:"Portfolio · idealwhy"});
 @media(max-width:560px){.project-cards{grid-template-columns:1fr;gap:32px}.card-copy h3 small{display:inline;margin-left:6px}.card-art{height:245px}.card-foot{font-size:10px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card-art{transition:none}}
 
-/* Persistent project navigation and clear chapter starts */
-.project-rail{position:fixed;left:28px;top:120px;width:166px;z-index:25;display:flex;flex-direction:column;gap:6px}.rail-label{font-size:9px;letter-spacing:.12em;color:var(--muted);padding:0 12px 14px}.project-rail a{padding:11px 12px;font-size:12px;color:var(--muted);border-radius:7px;transition:background .15s,color .15s}.project-rail a span{font-size:10px;margin-right:7px;opacity:.6}.project-rail a:hover{background:#eceee8;color:var(--ink)}.project-rail a[aria-current="location"]{background:#e7ecff;color:var(--blue);font-weight:700}.chapter-heading{display:flex;align-items:center;gap:18px;margin-bottom:38px;padding-top:24px;border-top:2px solid #c6cde0}.chapter-heading>span{font-size:38px;line-height:1;color:var(--blue);letter-spacing:-.06em;font-weight:600}.chapter-heading h2{font-size:17px;margin:0;letter-spacing:-.025em}.chapter-heading p{font-size:11px;color:var(--muted);margin:3px 0 0}.project{padding-top:48px}.nav{display:none}
-@media(min-width:1101px){.wrap{width:calc(100% - 274px);max-width:1160px;margin-left:230px;margin-right:44px}.hero-grid{gap:48px}.project-top{gap:48px}.preview{gap:40px}.detail-grid{gap:24px}}
-@media(max-width:1100px){html{scroll-padding-top:142px}.project-rail{position:sticky;top:72px;left:auto;width:100%;flex-direction:row;overflow-x:auto;padding:8px 18px;background:#fbfaf6f5;backdrop-filter:blur(12px);gap:6px;scrollbar-width:thin}.rail-label{display:none}.project-rail a{flex-shrink:0;padding:8px 12px;font-size:11px}.chapter-heading{margin-bottom:30px}.chapter-heading>span{font-size:32px}}
+/* Quiet right-side scroll index; content remains centered */
+.project-rail{position:fixed;right:12px;left:auto;top:50%;transform:translateY(-50%);width:28px;z-index:30;display:flex;flex-direction:column;gap:0;background:none;padding:0;overflow:visible}.rail-label{display:none}.project-rail a{position:relative;display:block;width:28px;height:40px;padding:0;font-size:0;color:transparent;border-radius:0;background:none}.project-rail a span{display:none}.project-rail a::before{content:"";position:absolute;right:10px;top:5px;width:7px;height:2px;background:#d2d4d5;box-shadow:0 10px #d2d4d5,0 20px #d2d4d5,0 30px #d2d4d5}.project-rail a[aria-current="location"]::before{width:13px;background:#303330}.project-rail a:hover::before{background:var(--blue)}.project-rail a::after{content:attr(aria-label);position:absolute;right:32px;top:0;white-space:nowrap;font-size:11px;line-height:24px;padding:3px 9px;background:#fbfaf6f5;color:var(--ink);border-radius:4px;opacity:0;pointer-events:none}.project-rail a:hover::after,.project-rail a:focus-visible::after{opacity:1}.chapter-heading{display:flex;align-items:center;gap:18px;margin-bottom:38px;padding-top:24px;border-top:1px solid #d5d9df}.chapter-heading>span{font-size:38px;line-height:1;color:var(--blue);letter-spacing:-.06em;font-weight:600}.chapter-heading h2{font-size:17px;margin:0;letter-spacing:-.025em}.chapter-heading p{font-size:11px;color:var(--muted);margin:3px 0 0}.project{padding-top:48px}.nav{display:none}.wrap{margin-left:auto;margin-right:auto}html{scroll-padding-top:92px}
+@media(max-width:800px){.project-rail{right:0;width:22px}.project-rail a{width:22px;height:30px}.project-rail a::before{right:5px;box-shadow:0 10px #d2d4d5,0 20px #d2d4d5}.wrap{width:calc(100% - 56px)}.chapter-heading{margin-bottom:30px}.chapter-heading>span{font-size:32px}}
 </style>
 </head>
 <body>
@@ -50,7 +49,7 @@ gtag("config","G-F6FELRLPHC",{page_title:"Portfolio · idealwhy"});
     </nav>
   </div>
 </header>
-<nav class="project-rail" aria-label="포트폴리오 목차"><span class="rail-label">PROJECT INDEX</span><a href="#projects">전체 프로젝트</a><a href="#workmate"><span>01</span> 부캐영어</a><a href="#insightmate"><span>02</span> InsightMate</a><a href="#flow"><span>03</span> Let It Flow</a><a href="#deokmate"><span>04</span> 덕메구해요</a><a href="#delivery">사업 · 협업 경험</a><a href="#background">Background</a></nav>
+<nav class="project-rail" aria-label="프로젝트 스크롤 이동"><a href="#projects" aria-label="전체 프로젝트">전체 프로젝트</a><a href="#workmate" aria-label="부캐영어">부캐영어</a><a href="#insightmate" aria-label="InsightMate">InsightMate</a><a href="#flow" aria-label="Let It Flow">Let It Flow</a><a href="#deokmate" aria-label="덕메구해요">덕메구해요</a><a href="#delivery" aria-label="KBS미디어 홈페이지">KBS미디어 홈페이지</a><a href="#background" aria-label="Background">Background</a></nav>
 
 <main>
 <section class="hero">
@@ -174,7 +173,7 @@ gtag("config","G-F6FELRLPHC",{page_title:"Portfolio · idealwhy"});
   </div>
 </section>
 
-<section class="delivery" id="delivery"><div class="wrap"><div class="eyebrow">BUSINESS TO PRODUCT · KBS미디어</div><h3>개발 이후 수개월간 보류된 서비스를,<br>실제 제휴 창구로 출시했습니다.</h3><p>음원 유통 제휴 홈페이지의 필요성을 제안하고 기획자와 함께 구축했습니다. 사업 용어와 신청 절차를 구현 기준으로 설명하고, 개인정보 처리로 출시가 보류된 뒤에는 비용과 운영 대안을 검토하며 관계 부서와 협의했습니다.</p><div class="delivery-grid"><div><h4>사업 요구 구체화</h4><p>제휴 신청에 필요한 정보와 이후 처리 절차를 정리해 기획·개발 담당자와 이해를 맞췄습니다.</p></div><div><h4>도입 조건 조율</h4><p>기획자와 외부 서버 활용을 검토하고 타 팀 운영 비용과 비교했습니다. 수집 항목을 최소화하는 방안과 사업 필요성을 바탕으로 팀장님·법무·경영·기획·개발 담당자들과 협의했습니다.</p></div><div><h4>출시 후 결과</h4><p>사내 최초의 음원 유통 제휴 페이지를 출시했고, 별도 광고 없이 5개월간 20건 이상의 제휴 문의가 유입됐습니다.</p></div></div></div></section>
+
 
 <section class="project" id="flow" data-project="let_it_flow">
   <div class="wrap"><div class="chapter-heading"><span>03</span><div><h2>Let It Flow</h2><p>참여형 서비스 · 토스 앱 출시</p></div></div>
@@ -259,6 +258,13 @@ gtag("config","G-F6FELRLPHC",{page_title:"Portfolio · idealwhy"});
   </div>
 </section>
 
+<section class="project" id="delivery" data-project="kbs_music"><div class="wrap">
+<div class="chapter-heading"><span>05</span><div><h2>KBS미디어 음원 유통 홈페이지</h2><p>재직 중 협업 프로젝트 · 사업 제안부터 출시까지</p></div></div>
+<div class="project-top"><div class="project-title"><div class="eyebrow">BUSINESS TO PRODUCT · KBS MEDIA</div><h3>음원 유통<br>제휴 홈페이지</h3><div class="meta"><span>사업 제안</span><span>요구사항 구체화</span><span>관계 부서 협의</span></div><a class="live" href="https://music.kbsmedia.co.kr/" target="_blank" rel="noreferrer">실제 홈페이지 보기 ↗</a></div><p class="project-question">사업에 필요한 제휴 창구를,<br><strong>실제 운영되는 서비스로 연결했습니다.</strong></p></div>
+<div class="preview"><div class="monitor"><a href="https://music.kbsmedia.co.kr/" target="_blank" rel="noreferrer"><img src="/assets/kbs-music-service.png" alt="KBS미디어 음원 유통 홈페이지 실제 첫 화면" loading="lazy"></a></div><div class="preview-copy"><div class="roleline">MY ROLE · 사업 제안 · 요구사항 정리 · 도입 협의</div><h4>개발 이후의 제약까지 풀어 출시한 협업 경험</h4><p>음원 유통 사업을 안내하고 제휴 신청을 받을 창구를 제안했습니다. 기획자와 신청 정보와 업무 절차를 구체화하고, 개인정보 처리 문제로 출시가 수개월간 보류된 뒤에는 비용과 운영 대안을 검토하며 팀장님 및 관계 부서와 협의했습니다.</p></div></div>
+<div class="detail-grid"><div class="detail"><div class="eyebrow">DEFINE</div><h4>사업의 언어를 구현 기준으로</h4><p>사업 용어의 의미와 제휴 신청에 필요한 정보, 접수 이후의 처리 절차를 정리해 기획·개발 담당자와 이해를 맞췄습니다.</p></div><div class="detail"><div class="eyebrow">ALIGN</div><h4>출시를 위한 대안 마련</h4><p>기획자가 제안한 외부 서버 활용안의 비용을 계산하고 타 팀 운영 비용과 비교했습니다. 수집 항목 최소화와 사업 필요성을 바탕으로 팀장님·법무·경영·기획·개발 담당자들과 협의했습니다.</p></div><div class="detail"><div class="eyebrow">RESULT</div><h4>5개월간 제휴 문의 20건 이상</h4><p>사내 최초의 음원 유통 제휴 페이지를 출시했습니다. 별도 광고 없이 신규 제휴 문의를 받는 사업 창구로 연결했습니다.</p></div></div><a class="back-projects" href="#projects">↑ 프로젝트 목록</a>
+</div></section>
+
 <section class="background" id="background">
   <div class="wrap">
     <div class="section-head">
@@ -310,7 +316,7 @@ gtag("config","G-F6FELRLPHC",{page_title:"Portfolio · idealwhy"});
 })();
 </script>
 <script>
-(()=>{const links=[...document.querySelectorAll('.project-rail a')];const targets=links.map(a=>document.querySelector(a.getAttribute('href')));let scheduled=false;function update(){scheduled=false;const marker=innerWidth<=1100?170:150;let current=0;targets.forEach((el,i)=>{if(el&&el.getBoundingClientRect().top<=marker&&(!targets[current]||el.getBoundingClientRect().top>targets[current].getBoundingClientRect().top))current=i;});const above=targets.map((el,i)=>({i,y:el?.getBoundingClientRect().top??Infinity})).filter(x=>x.y<=marker).sort((a,b)=>b.y-a.y);if(above.length)current=above[0].i;links.forEach((a,i)=>{if(i===current)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});}addEventListener('scroll',()=>{if(!scheduled){scheduled=true;requestAnimationFrame(update)}},{passive:true});addEventListener('resize',update);update();})();
+(()=>{const links=[...document.querySelectorAll('.project-rail a')];const targets=links.map(a=>document.querySelector(a.getAttribute('href')));let scheduled=false;function update(){scheduled=false;const marker=110;let current=0;targets.forEach((el,i)=>{if(el&&el.getBoundingClientRect().top<=marker&&(!targets[current]||el.getBoundingClientRect().top>targets[current].getBoundingClientRect().top))current=i;});const above=targets.map((el,i)=>({i,y:el?.getBoundingClientRect().top??Infinity})).filter(x=>x.y<=marker).sort((a,b)=>b.y-a.y);if(above.length)current=above[0].i;links.forEach((a,i)=>{if(i===current)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});}addEventListener('scroll',()=>{if(!scheduled){scheduled=true;requestAnimationFrame(update)}},{passive:true});addEventListener('resize',update);update();})();
 </script>
 </body>
 </html>
