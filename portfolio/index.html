@@ -196,6 +196,11 @@ html{scroll-padding-top:90px}.hero{padding:48px 0}.hero h1{font-size:clamp(60px,
 @media(max-width:700px){.project-cards{grid-template-columns:minmax(0,1fr)}.hero h1{font-size:68px}.hero{padding:36px 0}.hero-grid{gap:26px}.project-index{margin-top:32px}.index-heading{align-items:start;flex-direction:column;gap:4px}.card-art{height:195px}.card-copy{padding:20px}.card-copy h3 small{display:block;margin:4px 0 0}.card-foot{font-size:10px;gap:8px}.project{padding:48px 0}.project-title h3{font-size:44px}.delivery h3{font-size:26px}.project-question{font-size:24px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.project-card{transition:none}}
 
+
+/* Four projects, one consistent image-card system */
+.project-cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.project-card{border-radius:14px;display:flex;flex-direction:column}.card-art{height:290px;padding:22px;display:flex;align-items:center;justify-content:center;border-bottom:1px solid #11110e0b}.card-art img{width:100%;height:100%;object-fit:contain;object-position:center;border-radius:7px;box-shadow:none}.workmate-art{background:#e7f1ee}.insight-art{background:#e8edf5}.flow-art{background:#e5f0f3}.deokmate-art{background:#eee8f5}.mobile-art img{width:auto;max-width:100%;height:100%;border-radius:10px;box-shadow:0 5px 18px #11110e12}.card-copy{padding:22px 24px;display:flex;flex-direction:column;flex:1}.card-copy h3{font-size:27px;line-height:1.35;min-height:37px}.card-copy p{min-height:24px}.card-foot{margin-top:auto;padding-top:20px}.featured{border-color:var(--line)}.featured .card-label{font-weight:700}.project-card:hover{border-color:var(--blue)}
+@media(max-width:700px){.project-cards{grid-template-columns:minmax(0,1fr);gap:20px}.card-art{height:230px;padding:16px}.card-copy{padding:20px}.card-copy h3 small{display:inline;margin-left:6px}.card-copy h3{font-size:25px}.card-foot{font-size:10px}}
+
 </style>
 </head>
 <body>
@@ -226,10 +231,10 @@ html{scroll-padding-top:90px}.hero{padding:48px 0}.hero h1{font-size:clamp(60px,
       </div>
     </div>
 <div class="project-index" id="projects"><div class="index-heading"><h2>Selected projects</h2><span>문제에서 구현, 실제 출시까지</span></div><div class="project-cards">
-<a class="project-card featured" href="#workmate"><div class="card-art"><img src="/assets/workmate-game.webp" alt="부캐영어 실제 업무 화면"></div><div class="card-copy"><span class="card-label">01 · 대표 프로젝트 / 장관상 대상</span><h3>부캐영어 <small>WorkMate English</small></h3><p>관계와 업무 맥락에 맞춰 대화하는 AI 가상 회사</p><div class="card-foot"><span>개인 기획 · 구현 · 배포 · 발표</span><b>사례 보기 ↗</b></div></div></a>
-<a class="project-card" href="#insightmate"><div class="card-art insight-art"><span>흩어진 팬 반응을<br><strong>판단의 근거로.</strong></span><div>수집 → 분석 → 시각화 → AI 해석</div></div><div class="card-copy"><span class="card-label">02 · 콘텐츠 사업 × 데이터</span><h3>InsightMate</h3><p>두 현장에서 겪은 분석의 불편을 하나의 도구로</p><div class="card-foot"><span>문제 정의 · 분석 설계 · 직접 구현</span><b>사례 보기 ↗</b></div></div></a>
-<a class="project-card compact" href="#flow"><div class="card-copy"><span class="card-label">03 · 토스 앱 출시</span><h3>Let It Flow</h3><p>마음을 잠시 놓아주는 참여형 서비스</p><div class="card-foot"><span>인터랙션 설계 · 출시 · 행동 데이터</span><b>사례 보기 ↗</b></div></div></a>
-<a class="project-card compact" href="#deokmate"><div class="card-copy"><span class="card-label">04 · 공개 서비스</span><h3>덕메구해요</h3><p>팬 활동을 함께할 동행을 찾는 서비스</p><div class="card-foot"><span>팬덤의 필요를 서비스로</span><b>사례 보기 ↗</b></div></div></a>
+<a class="project-card featured" href="#workmate"><div class="card-art workmate-art"><img src="/assets/workmate-card.png" alt="부캐영어 실제 서비스 첫 화면"></div><div class="card-copy"><span class="card-label">01 · 대표 프로젝트 / 장관상 대상</span><h3>부캐영어 <small>WorkMate English</small></h3><p>관계와 업무 맥락에 맞춰 대화하는 AI 가상 회사</p><div class="card-foot"><span>개인 기획 · 구현 · 배포 · 발표</span><b>사례 보기 ↗</b></div></div></a>
+<a class="project-card" href="#insightmate"><div class="card-art insight-art"><img src="/assets/insightmate-card.png" alt="InsightMate SNS 검색과 수집 설정 화면"></div><div class="card-copy"><span class="card-label">02 · 콘텐츠 사업 × 데이터</span><h3>InsightMate</h3><p>두 현장에서 겪은 분석의 불편을 하나의 도구로</p><div class="card-foot"><span>문제 정의 · 분석 설계 · 직접 구현</span><b>사례 보기 ↗</b></div></div></a>
+<a class="project-card" href="#flow"><div class="card-art mobile-art flow-art"><img src="/assets/let-it-flow.webp" alt="Let It Flow 실제 서비스 화면" loading="lazy"></div><div class="card-copy"><span class="card-label">03 · 토스 앱 출시</span><h3>Let It Flow</h3><p>마음을 잠시 놓아주는 참여형 서비스</p><div class="card-foot"><span>인터랙션 설계 · 출시 · 행동 데이터</span><b>사례 보기 ↗</b></div></div></a>
+<a class="project-card" href="#deokmate"><div class="card-art mobile-art deokmate-art"><img src="/assets/deokmate-live.png" alt="덕메구해요 서비스 소개 및 이용 예시" loading="lazy"></div><div class="card-copy"><span class="card-label">04 · 공개 서비스</span><h3>덕메구해요</h3><p>팬 활동을 함께할 동행을 찾는 서비스</p><div class="card-foot"><span>팬덤의 필요를 서비스로</span><b>사례 보기 ↗</b></div></div></a>
 </div></div>
   </div>
 </section>
