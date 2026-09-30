@@ -34,6 +34,10 @@ gtag("config","G-F6FELRLPHC",{page_title:"Portfolio · idealwhy"});
 /* Quiet right-side scroll index; content remains centered */
 .project-rail{position:fixed;right:12px;left:auto;top:50%;transform:translateY(-50%);width:28px;z-index:30;display:flex;flex-direction:column;gap:0;background:none;padding:0;overflow:visible}.rail-label{display:none}.project-rail a{position:relative;display:block;width:28px;height:40px;padding:0;font-size:0;color:transparent;border-radius:0;background:none}.project-rail a span{display:none}.project-rail a::before{content:"";position:absolute;right:10px;top:5px;width:7px;height:2px;background:#d2d4d5;box-shadow:0 10px #d2d4d5,0 20px #d2d4d5,0 30px #d2d4d5}.project-rail a[aria-current="location"]::before{width:13px;background:#303330}.project-rail a:hover::before{background:var(--blue)}.project-rail a::after{content:attr(aria-label);position:absolute;right:32px;top:0;white-space:nowrap;font-size:11px;line-height:24px;padding:3px 9px;background:#fbfaf6f5;color:var(--ink);border-radius:4px;opacity:0;pointer-events:none}.project-rail a:hover::after,.project-rail a:focus-visible::after{opacity:1}.chapter-heading{display:flex;align-items:center;gap:18px;margin-bottom:38px;padding-top:24px;border-top:1px solid #d5d9df}.chapter-heading>span{font-size:38px;line-height:1;color:var(--blue);letter-spacing:-.06em;font-weight:600}.chapter-heading h2{font-size:17px;margin:0;letter-spacing:-.025em}.chapter-heading p{font-size:11px;color:var(--muted);margin:3px 0 0}.project{padding-top:48px}.nav{display:none}.wrap{margin-left:auto;margin-right:auto}html{scroll-padding-top:92px}
 @media(max-width:800px){.project-rail{right:0;width:22px}.project-rail a{width:22px;height:30px}.project-rail a::before{right:5px;box-shadow:0 10px #d2d4d5,0 20px #d2d4d5}.wrap{width:calc(100% - 56px)}.chapter-heading{margin-bottom:30px}.chapter-heading>span{font-size:32px}}
+
+/* Consistent phone frames and visible proof points */
+.device-phone{position:relative;flex-shrink:0;width:244px;aspect-ratio:390/844;padding:8px;background:#242629;border:1px solid #55585d;border-radius:31px;box-shadow:0 16px 32px #20221f18;margin:auto}.device-phone::before{content:"";position:absolute;top:3px;left:50%;transform:translateX(-50%);width:28px;height:3px;border-radius:3px;background:#727578}.device-screen{width:100%;height:100%;overflow:hidden;border-radius:23px;background:white}.device-phone .device-screen img{display:block;width:100%;height:100%;max-width:none;object-fit:cover;object-position:top;border-radius:0;box-shadow:none}.mobile-art .device-phone{height:238px;width:auto;aspect-ratio:390/844;padding:4px;border-radius:17px;box-shadow:0 8px 18px #20221f18}.mobile-art .device-screen{border-radius:12px}.mobile-art .device-phone::before{width:14px;height:2px;top:1px}.phone,.deokmate-mockup{max-width:none;width:244px;margin:auto}.award-proof{display:flex;align-items:center;gap:18px;margin-top:24px;padding:18px 20px;background:#eef0e3;border-radius:10px}.award-proof strong{font-size:40px;line-height:1;letter-spacing:-.06em;color:#343e25;flex-shrink:0}.award-proof b{display:block;font-size:13px;font-weight:600}.award-proof span{display:block;font-size:11px;color:var(--muted);margin-top:4px}.case-award{padding:0;margin-bottom:22px;font-size:12px;color:var(--muted)}.case-award strong{display:block;font-size:34px;line-height:1.2;color:var(--blue);letter-spacing:-.04em;margin:5px 0}.business-proof{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin:0 0 42px}.business-proof>div{padding:24px;background:#ffffff09;border-radius:10px}.business-proof strong{font-size:42px;line-height:1.2;color:#e0ebc3;letter-spacing:-.05em}.business-proof b{display:block;font-size:14px;margin:8px 0}.business-proof p{font-size:12px;color:#c1c8bc;margin:0;max-width:470px}
+@media(max-width:800px){.business-proof{grid-template-columns:1fr;gap:16px}.award-proof{padding:16px;gap:14px}.award-proof strong{font-size:34px}.case-award strong{font-size:30px}}
 </style>
 </head>
 <body>
@@ -61,14 +65,14 @@ gtag("config","G-F6FELRLPHC",{page_title:"Portfolio · idealwhy"});
       </div>
       <div>
         <p class="profile-line">박수아 · 콘텐츠 사업에서 AI 제품까지</p><p class="hero-copy">콘텐츠 사업에서 발견한 문제를,<br>실제로 쓰이는 AI 제품으로 만듭니다.</p>
-        <p class="hero-sub">KBS미디어의 사업 경험과 퍼포먼스 마케팅에서 얻은 문제의식을 데이터 분석과 직접 구현으로 연결합니다.</p><div class="proofs"><span>콘텐츠 사업 · 마케팅 실무</span><span>AI 서비스 기획·구현·배포</span><span>리부트 AI 활용대회 장관상 대상</span></div>
+        <p class="hero-sub">KBS미디어의 사업 경험과 퍼포먼스 마케팅에서 얻은 문제의식을 데이터 분석과 직접 구현으로 연결합니다.</p><div class="proofs"><span>콘텐츠 사업 · 마케팅 실무</span><span>AI 서비스 기획·구현·배포</span></div><div class="award-proof"><strong>대상</strong><div><b>과학기술정보통신부 장관상</b><span>리부트 AI 활용대회 · 부캐영어 개인 기획·개발·발표</span></div></div>
       </div>
     </div>
 <div class="project-index" id="projects"><div class="index-heading"><h2>Selected projects</h2><span>문제에서 구현, 실제 출시까지</span></div><div class="project-cards">
 <a class="project-card featured" href="#workmate"><div class="card-art workmate-art"><img src="/assets/workmate-card.png" alt="부캐영어 실제 서비스 첫 화면"></div><div class="card-copy"><span class="card-label">01 · 대표 프로젝트 / 장관상 대상</span><h3>부캐영어 <small>WorkMate English</small></h3><p>관계와 업무 맥락에 맞춰 대화하는 AI 가상 회사</p><div class="card-foot"><span>개인 기획 · 구현 · 배포 · 발표</span><b>사례 보기 ↗</b></div></div></a>
 <a class="project-card" href="#insightmate"><div class="card-art insight-art"><img src="/assets/insightmate-card.png" alt="InsightMate SNS 검색과 수집 설정 화면"></div><div class="card-copy"><span class="card-label">02 · 콘텐츠 사업 × 데이터</span><h3>InsightMate</h3><p>두 현장에서 겪은 분석의 불편을 하나의 도구로</p><div class="card-foot"><span>문제 정의 · 분석 설계 · 직접 구현</span><b>사례 보기 ↗</b></div></div></a>
-<a class="project-card" href="#flow"><div class="card-art mobile-art flow-art"><img src="/assets/let-it-flow.webp" alt="Let It Flow 실제 서비스 화면" loading="lazy"></div><div class="card-copy"><span class="card-label">03 · 토스 앱 출시</span><h3>Let It Flow</h3><p>마음을 잠시 놓아주는 참여형 서비스</p><div class="card-foot"><span>인터랙션 설계 · 출시 · 행동 데이터</span><b>사례 보기 ↗</b></div></div></a>
-<a class="project-card" href="#deokmate"><div class="card-art mobile-art deokmate-art"><img src="/assets/deokmate-service.png" alt="덕메구해요 실제 공연 목록 화면" loading="lazy"></div><div class="card-copy"><span class="card-label">04 · 공개 서비스</span><h3>덕메구해요</h3><p>팬 활동을 함께할 동행을 찾는 서비스</p><div class="card-foot"><span>팬덤의 필요를 서비스로</span><b>사례 보기 ↗</b></div></div></a>
+<a class="project-card" href="#flow"><div class="card-art mobile-art flow-art"><div class="device-phone"><div class="device-screen"><img src="/assets/let-it-flow.webp" alt="Let It Flow 실제 서비스 화면" loading="lazy"></div></div></div><div class="card-copy"><span class="card-label">03 · 토스 앱 출시</span><h3>Let It Flow</h3><p>마음을 잠시 놓아주는 참여형 서비스</p><div class="card-foot"><span>인터랙션 설계 · 출시 · 행동 데이터</span><b>사례 보기 ↗</b></div></div></a>
+<a class="project-card" href="#deokmate"><div class="card-art mobile-art deokmate-art"><div class="device-phone"><div class="device-screen"><img src="/assets/deokmate-service.png" alt="덕메구해요 실제 공연 목록 화면" loading="lazy"></div></div></div><div class="card-copy"><span class="card-label">04 · 공개 서비스</span><h3>덕메구해요</h3><p>팬 활동을 함께할 동행을 찾는 서비스</p><div class="card-foot"><span>팬덤의 필요를 서비스로</span><b>사례 보기 ↗</b></div></div></a>
 </div></div>
   </div>
 </section>
@@ -82,7 +86,7 @@ gtag("config","G-F6FELRLPHC",{page_title:"Portfolio · idealwhy"});
         <div class="meta"><span>React 19</span><span>TypeScript</span><span>Supabase</span><span>Solar LLM</span><span>Web Push</span></div>
         <a class="live" href="https://www.enmate.co.kr" target="_blank" rel="noreferrer">Open live service ↗</a>
       </div>
-      <div><span class="case-award">리부트 AI 활용대회 · 과학기술정보통신부 장관상 대상</span><p class="project-question">“업무 영어는 왜 늘 공부하는 순간과<br><strong>실제로 쓰는 순간이 따로일까?</strong>”</p></div>
+      <div><div class="case-award">리부트 AI 활용대회<strong>대상 · 과학기술정보통신부 장관상</strong>개인 기획 · 구현 · 배포 · 발표</div><p class="project-question">“업무 영어는 왜 늘 공부하는 순간과<br><strong>실제로 쓰는 순간이 따로일까?</strong>”</p></div>
     </div>
 
     <div class="preview">
@@ -188,7 +192,7 @@ gtag("config","G-F6FELRLPHC",{page_title:"Portfolio · idealwhy"});
     </div>
 
     <div class="preview">
-      <div class="phone"><img src="/assets/let-it-flow.webp" alt="Let It Flow 실제 서비스 화면"></div>
+      <div class="phone"><div class="device-phone"><div class="device-screen"><img src="/assets/let-it-flow.webp" alt="Let It Flow 실제 서비스 화면"></div></div></div>
       <div class="preview-copy">
         <div class="roleline">MY ROLE · 콘셉트 · 인터랙션 · 직접구현 · 출시/데이터</div>
         <h4>감정을 해결하는 서비스가 아니라, 잠시 놓아주는 경험을 만들었습니다.</h4>
@@ -228,7 +232,7 @@ gtag("config","G-F6FELRLPHC",{page_title:"Portfolio · idealwhy"});
     </div>
 
     <div class="preview deokmate-preview">
-      <div class="deokmate-mockup"><img src="/assets/deokmate-service.png" alt="덕메구해요 실제 서비스 화면"></div>
+      <div class="deokmate-mockup"><div class="device-phone"><div class="device-screen"><img src="/assets/deokmate-service.png" alt="덕메구해요 실제 서비스 화면"></div></div></div>
       <div class="preview-copy">
         <div class="roleline">MY ROLE · 팬 경험 정의 · 제품설계 · 직접구현 · 운영</div>
         <h4>공연 전후의 ‘혼자 해결하던 일’을 하나의 팬 경험으로 묶고 있습니다.</h4>
@@ -271,7 +275,7 @@ gtag("config","G-F6FELRLPHC",{page_title:"Portfolio · idealwhy"});
       <div><div class="eyebrow">BACKGROUND</div><h2>Entertainment<br>→ Product</h2></div>
       <p>콘텐츠 사업과 마케팅에서 이용자의 반응을 읽고, 데이터 분석과 AI 구현을 통해 필요한 해결책을 직접 만들어왔습니다. 이 경험들이 지금의 제품 판단 기준입니다.</p>
     </div>
-    <div class="bridge">
+    <div class="business-proof"><div><strong>230%</strong><b>앨범 사업 제작비 대비 수익률</b><p>팬 반응에서 구매 방식의 불만과 음원에 대한 관심을 구분하고, 팀장님과 프로모션 방향을 협의해 음원 선공개를 진행했습니다. 수치는 해당 사업 전체의 성과입니다.</p></div><div><strong>20건+</strong><b>제휴 홈페이지 출시 후 5개월간 문의</b><p>홈페이지 구축을 제안하고 요구사항 정리와 도입 협의에 참여했습니다. 별도 광고 없이 신규 제휴 문의가 유입되는 사업 창구로 연결했습니다.</p></div></div><div class="bridge">
       <blockquote>팬의 반응을 현장에서 보고,<br><strong>데이터로 읽고, 필요하면 직접 제품으로 만듭니다.</strong></blockquote>
       <div class="bridge-copy">
         <p>KBS미디어 음악사업에서 음원·앨범 제작, 유통, 계약, 정산, 팬 이벤트와 신규 제휴를 End-to-End로 운영했습니다. 팬 반응을 프로모션과 현장 경험으로 바꿔 대표 프로젝트 수익률 230%, 투자금 회수율 310%를 만들었습니다.</p>
