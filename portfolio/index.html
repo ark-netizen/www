@@ -190,6 +190,12 @@ section{padding:92px 0}
 .profile-line{font-size:14px;font-weight:700;margin:0 0 14px}.proofs{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}.proofs span{padding:7px 10px;background:#eef0ff;color:#253eac;font-size:12px}.need-map{padding:26px;background:#eeeee7;border-radius:12px}.need-map h4{margin:0 0 18px;font-size:20px}.need-map div{padding:14px 0;border-top:1px solid var(--line)}.need-map b,.need-map span{display:block}.need-map b{font-size:14px}.need-map span{font-size:13px;color:var(--muted);margin-top:5px}.project-title h3{overflow-wrap:anywhere}.delivery{background:var(--paper)}.delivery h3{font-size:32px;line-height:1.35;margin:8px 0 20px}.delivery p{max-width:900px}.delivery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:28px}.delivery-grid h4{margin-bottom:8px}.delivery-grid p{font-size:14px;color:var(--muted)}
 @media(max-width:860px){.project-top,.preview,.delivery-grid{grid-template-columns:minmax(0,1fr);gap:26px}.project-top>*,.preview>*{min-width:0}.project-question{font-size:26px}.monitor{width:min(470px,100%)}.tech-row{grid-template-columns:1fr;gap:5px}.nav{display:none}.hero{padding-top:48px}.hero-grid{gap:30px}.preview-copy p{font-size:15px}.roleline{overflow-wrap:anywhere}.project-title h3{font-size:52px}}
 
+
+/* Project selection and progressive detail */
+html{scroll-padding-top:90px}.hero{padding:48px 0}.hero h1{font-size:clamp(60px,7.5vw,102px)}.hero-grid{align-items:center}.hero-copy{font-size:clamp(22px,2.2vw,30px)}.project-index{margin-top:44px}.index-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px}.index-heading h2{font-size:18px;margin:0;letter-spacing:-.03em}.index-heading>span{font-size:12px;color:var(--muted)}.project-cards{display:grid;grid-template-columns:1.2fr 1fr;gap:18px}.project-card{display:block;background:#fffdf8;border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:transform .2s,border-color .2s,box-shadow .2s}.project-card:hover{transform:translateY(-3px);border-color:var(--blue);box-shadow:0 10px 24px #11110e0c}.project-card:focus-visible,summary:focus-visible{outline:3px solid var(--blue);outline-offset:4px}.featured{border-color:#3157ff70}.card-art{height:220px;background:#e7eaff;overflow:hidden;padding:20px 28px 0}.card-art img{width:100%;height:100%;object-fit:cover;object-position:top;border-radius:8px 8px 0 0;box-shadow:0 5px 24px #18297620}.insight-art{background:#e9eddf;padding:26px 30px;display:flex;flex-direction:column;justify-content:space-between}.insight-art>span{font-size:30px;line-height:1.3;letter-spacing:-.04em}.insight-art strong{color:#39573c}.insight-art>div{font-size:12px;color:#53614a}.card-copy{padding:22px 24px}.card-label{color:var(--blue);font-size:11px;font-weight:700}.card-copy h3{font-size:28px;letter-spacing:-.045em;margin:7px 0}.card-copy h3 small{font-size:13px;font-weight:400;color:var(--muted);margin-left:6px;letter-spacing:0}.card-copy p{font-size:14px;color:var(--muted);margin:0}.card-foot{display:flex;justify-content:space-between;gap:12px;margin-top:22px;font-size:11px}.card-foot span{color:var(--muted)}.card-foot b{white-space:nowrap;color:var(--blue)}.compact .card-copy{padding:20px 24px}.compact h3{font-size:23px}.compact .card-foot{margin-top:14px}.project{padding:64px 0}.case-details{margin-top:22px;border-top:1px solid var(--line)}.case-details>summary{cursor:pointer;padding:20px 4px;font-size:14px;font-weight:600;color:var(--blue)}.case-details[open]>summary{border-bottom:1px solid var(--line)}.case-details .detail-grid{margin-top:18px}.project-title h3{font-size:clamp(38px,4.5vw,58px)}.project-title h3 small{display:block;font-size:18px;color:var(--muted);letter-spacing:-.02em;margin-top:14px}.case-award{display:inline-block;background:var(--acid);padding:8px 12px;font-size:12px;font-weight:600;margin-bottom:18px}.delivery{padding:56px 0}.preview{margin-top:24px}.back-projects{display:inline-block;font-size:12px;color:var(--muted);margin-top:24px}
+@media(max-width:700px){.project-cards{grid-template-columns:minmax(0,1fr)}.hero h1{font-size:68px}.hero{padding:36px 0}.hero-grid{gap:26px}.project-index{margin-top:32px}.index-heading{align-items:start;flex-direction:column;gap:4px}.card-art{height:195px}.card-copy{padding:20px}.card-copy h3 small{display:block;margin:4px 0 0}.card-foot{font-size:10px;gap:8px}.project{padding:48px 0}.project-title h3{font-size:44px}.delivery h3{font-size:26px}.project-question{font-size:24px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.project-card{transition:none}}
+
 </style>
 </head>
 <body>
@@ -197,8 +203,8 @@ section{padding:92px 0}
   <div class="wrap">
     <a class="brand" href="https://www.idealwhy.com/">idealwhy<i>?</i> / portfolio</a>
     <nav class="nav">
+      <a href="#workmate">부캐영어</a>
       <a href="#insightmate">InsightMate</a>
-      <a href="#workmate">WorkMate</a>
       <a href="#flow">Let It Flow</a>
       <a href="#deokmate">Deokmate</a>
       <a href="#background">Background</a>
@@ -219,62 +225,12 @@ section{padding:92px 0}
         <p class="hero-sub">KBS미디어의 사업 경험과 퍼포먼스 마케팅에서 얻은 문제의식을 데이터 분석과 직접 구현으로 연결합니다.</p><div class="proofs"><span>콘텐츠 사업 · 마케팅 실무</span><span>AI 서비스 기획·구현·배포</span><span>리부트 AI 활용대회 장관상 대상</span></div>
       </div>
     </div>
-    <div class="quick">
-      <a href="#insightmate"><span>01 / LIVE</span><b>InsightMate</b></a>
-      <a href="#workmate"><span>02 / AWARD · LIVE</span><b>부캐영어 · WorkMate English</b></a>
-      <a href="#flow"><span>03 / RELEASED</span><b>Let It Flow</b></a>
-      <a href="#deokmate"><span>04 / LIVE</span><b>Deokmate</b></a>
-    </div>
-  </div>
-</section>
-
-<section class="project" id="insightmate" data-project="insightmate">
-  <div class="wrap">
-    <div class="project-top">
-      <div class="project-title">
-        <div class="eyebrow">01 / FAN DATA · AI ANALYTICS</div>
-        <h3>Insight<br>Mate</h3>
-        <div class="meta"><span>React 18</span><span>FastAPI</span><span>Supabase</span><span>Recharts</span><span>Network Graph</span></div>
-        <a class="live" href="https://insightmate.idealwhy.com" target="_blank" rel="noreferrer">Open live service ↗</a>
-      </div>
-      <p class="project-question">“팬 반응을 많이 보는 것과<br><strong>제대로 읽는 것은 왜 다를까?</strong>”</p>
-    </div>
-
-    <div class="preview">
-      <div class="need-map"><div class="eyebrow">현업의 불편 → 구현한 기능</div><h4>두 현장에서 필요했던 분석을 한곳에</h4><div><b>SNS마다 흩어진 반응</b><span>여러 채널의 수집·분석을 하나의 흐름으로</span></div><div><b>목적마다 다시 만드는 시각화</b><span>분포·추이·관계망을 바꿔가며 탐색</span></div><div><b>팬덤의 별칭과 고유 표현</b><span>동의어·불용어 관리와 원문 확인·교정</span></div></div>
-      <div class="preview-copy">
-        <div class="roleline">MY ROLE · 문제정의 · 분석구조 · UX · 직접구현</div>
-        <h4>팬 반응 수집과 해석을 하나의 의사결정 흐름으로 묶었습니다.</h4>
-        <p>KBS미디어에서 팬 반응을 모니터링하고 퍼포먼스 마케팅 업무를 하며, 여러 SNS의 데이터를 수집하고 목적마다 시각화를 다시 구성하는 불편을 겪었습니다. 두 현장에서 필요했던 기능을 직접 구현해, 수집·분석·시각화와 선택 데이터 기반 AI 질의를 한 흐름으로 연결했습니다.</p>
-      </div>
-    </div>
-
-    <div class="detail-grid">
-      <div class="detail"><div class="eyebrow">WHY</div><h4>수집보다 중요한 건 맥락을 잃지 않는 것</h4><p>X·YouTube·Instagram의 반응을 한곳에 모으되 계정·게시물·댓글 등 원본 유형을 유지했습니다. 어디서 나온 반응인지 알아야 해석도 달라진다고 봤습니다.</p></div>
-      <div class="detail"><div class="eyebrow">CAPTURE</div><h4>보고 있던 화면에서 필요한 반응만 바로 수집</h4><p>브라우저 탐색 흐름을 끊지 않고 필요한 데이터만 선택해 저장하도록 구성했습니다. ‘수집 도구를 따로 켜는 일’ 자체를 줄이는 데 초점을 맞췄습니다.</p></div>
-      <div class="detail"><div class="eyebrow">ANALYSIS</div><h4>하나의 점수 대신 여러 시선으로 보기</h4><p>감성 분포, 키워드, 시간 변화, 동시출현 관계망을 함께 보여줍니다. 특정 수치 하나로 팬덤을 단정하기보다 서로 다른 신호를 같이 볼 수 있게 했습니다.</p></div>
-      <div class="detail"><div class="eyebrow">GOVERNANCE</div><h4>분석 오류를 ‘모델 탓’으로 끝내지 않기</h4><p>동의어·불용어·임시 보정 규칙을 운영 화면에서 관리하도록 했습니다. 분석 결과를 그대로 믿기보다 사람이 다시 고칠 수 있는 레이어를 남겼습니다.</p></div>
-      <div class="detail"><div class="eyebrow">AI LAYER</div><h4>AI는 원본을 대신하지 않고 해석을 보조</h4><p>사용자가 먼저 데이터 범위를 선택한 뒤 그 범위 안에서 요약과 맥락 해석을 요청하도록 설계했습니다. 원본 데이터와 생성 결과도 분리해서 볼 수 있습니다.</p></div>
-      <div class="detail"><div class="eyebrow">BUILD</div><h4>수집부터 시각화까지 직접 연결</h4><p>React 대시보드와 Python/FastAPI 수집·분석 서버를 분리하고 Supabase에 연결했습니다. 분석 종류에 따라 Recharts와 force graph를 나눠 사용했습니다.</p></div>
-    </div>
-
-    <div class="arch">
-      <div class="eyebrow">HOW IT WORKS</div>
-      <div class="arch-flow">
-        <div class="arch-node"><b>01 / SOURCE</b><span>X · YouTube · Instagram</span></div>
-        <div class="arch-node"><b>02 / CAPTURE</b><span>브라우저에서 필요한 반응 수집</span></div>
-        <div class="arch-node"><b>03 / STORE</b><span>원본과 분석 데이터를 분리 저장</span></div>
-        <div class="arch-node"><b>04 / ANALYZE</b><span>감성 · 키워드 · 트렌드 · 관계망</span></div>
-        <div class="arch-node"><b>05 / INTERPRET</b><span>선택 데이터 기반 AI 질의</span></div>
-      </div>
-    </div>
-
-    <div class="tech-table">
-      <div class="tech-row"><b>FRONTEND</b><span>React 18 · Vite · Tailwind CSS · Recharts · React Force Graph</span></div>
-      <div class="tech-row"><b>BACKEND</b><span>Python · FastAPI · Supabase · kiwipiepy</span></div>
-      <div class="tech-row"><b>COLLECT</b><span>X / Twitter 수집 · YouTube comments · Instaloader</span></div>
-      <div class="tech-row"><b>DEPLOY</b><span>Vercel frontend · Render backend</span></div>
-    </div>
+<div class="project-index" id="projects"><div class="index-heading"><h2>Selected projects</h2><span>문제에서 구현, 실제 출시까지</span></div><div class="project-cards">
+<a class="project-card featured" href="#workmate"><div class="card-art"><img src="/assets/workmate-game.webp" alt="부캐영어 실제 업무 화면"></div><div class="card-copy"><span class="card-label">01 · 대표 프로젝트 / 장관상 대상</span><h3>부캐영어 <small>WorkMate English</small></h3><p>관계와 업무 맥락에 맞춰 대화하는 AI 가상 회사</p><div class="card-foot"><span>개인 기획 · 구현 · 배포 · 발표</span><b>사례 보기 ↗</b></div></div></a>
+<a class="project-card" href="#insightmate"><div class="card-art insight-art"><span>흩어진 팬 반응을<br><strong>판단의 근거로.</strong></span><div>수집 → 분석 → 시각화 → AI 해석</div></div><div class="card-copy"><span class="card-label">02 · 콘텐츠 사업 × 데이터</span><h3>InsightMate</h3><p>두 현장에서 겪은 분석의 불편을 하나의 도구로</p><div class="card-foot"><span>문제 정의 · 분석 설계 · 직접 구현</span><b>사례 보기 ↗</b></div></div></a>
+<a class="project-card compact" href="#flow"><div class="card-copy"><span class="card-label">03 · 토스 앱 출시</span><h3>Let It Flow</h3><p>마음을 잠시 놓아주는 참여형 서비스</p><div class="card-foot"><span>인터랙션 설계 · 출시 · 행동 데이터</span><b>사례 보기 ↗</b></div></div></a>
+<a class="project-card compact" href="#deokmate"><div class="card-copy"><span class="card-label">04 · 공개 서비스</span><h3>덕메구해요</h3><p>팬 활동을 함께할 동행을 찾는 서비스</p><div class="card-foot"><span>팬덤의 필요를 서비스로</span><b>사례 보기 ↗</b></div></div></a>
+</div></div>
   </div>
 </section>
 
@@ -282,12 +238,12 @@ section{padding:92px 0}
   <div class="wrap">
     <div class="project-top">
       <div class="project-title">
-        <div class="eyebrow">02 / 부캐영어 · 개인 프로젝트 · LIVE SERVICE</div>
-        <h3>WorkMate<br>English</h3>
+        <div class="eyebrow">01 / 부캐영어 · 개인 프로젝트 · LIVE SERVICE</div>
+        <h3>부캐영어<small>WorkMate English</small></h3>
         <div class="meta"><span>React 19</span><span>TypeScript</span><span>Supabase</span><span>Solar LLM</span><span>Web Push</span></div>
         <a class="live" href="https://www.enmate.co.kr" target="_blank" rel="noreferrer">Open live service ↗</a>
       </div>
-      <p class="project-question">“업무 영어는 왜 늘 공부하는 순간과<br><strong>실제로 쓰는 순간이 따로일까?</strong>”</p>
+      <div><span class="case-award">리부트 AI 활용대회 · 과학기술정보통신부 장관상 대상</span><p class="project-question">“업무 영어는 왜 늘 공부하는 순간과<br><strong>실제로 쓰는 순간이 따로일까?</strong>”</p></div>
     </div>
 
     <div class="preview">
@@ -299,6 +255,7 @@ section{padding:92px 0}
       </div>
     </div>
 
+    <details class="case-details"><summary>설계 판단과 구현 과정 자세히 보기</summary>
     <div class="detail-grid">
       <div class="detail"><div class="eyebrow">WHY</div><h4>학습 의지보다 상황이 먼저 움직이게</h4><p>사용자가 공부하러 들어오기를 기다리는 대신 Web Push·알림으로 업무가 먼저 도착하도록 바꿨습니다. 영어를 써야 하는 이유가 생기면 학습 동기도 함께 따라온다고 봤습니다.</p></div>
       <div class="detail"><div class="eyebrow">PRODUCT DECISION</div><h4>관계별 말투를 기능이 아니라 구조로</h4><p>동료는 캐주얼, 상사는 프로페셔널, 거래처는 포멀하게 분리하고 Messenger·Email 등 채널까지 함께 설계했습니다. 같은 뜻도 관계에 따라 표현이 달라지는 경험을 제품 안에 넣었습니다.</p></div>
@@ -325,6 +282,61 @@ section{padding:92px 0}
       <div class="tech-row"><b>AI / DELIVERY</b><span>Upstage Solar Pro 2 · Service Worker · Web Push (VAPID)</span></div>
       <div class="tech-row"><b>DEPLOY</b><span>GitHub Pages · GitHub Actions · Supabase pg_cron</span></div>
     </div>
+    </details>
+    <a class="back-projects" href="#projects">↑ 프로젝트 목록</a>
+  </div>
+</section>
+
+<section class="project" id="insightmate" data-project="insightmate">
+  <div class="wrap">
+    <div class="project-top">
+      <div class="project-title">
+        <div class="eyebrow">02 / FAN DATA · AI ANALYTICS</div>
+        <h3>Insight<br>Mate</h3>
+        <div class="meta"><span>React 18</span><span>FastAPI</span><span>Supabase</span><span>Recharts</span><span>Network Graph</span></div>
+        <a class="live" href="https://insightmate.idealwhy.com" target="_blank" rel="noreferrer">Open live service ↗</a>
+      </div>
+      <p class="project-question">“팬 반응을 많이 보는 것과<br><strong>제대로 읽는 것은 왜 다를까?</strong>”</p>
+    </div>
+
+    <div class="preview">
+      <div class="need-map"><div class="eyebrow">현업의 불편 → 구현한 기능</div><h4>두 현장에서 필요했던 분석을 한곳에</h4><div><b>SNS마다 흩어진 반응</b><span>여러 채널의 수집·분석을 하나의 흐름으로</span></div><div><b>목적마다 다시 만드는 시각화</b><span>분포·추이·관계망을 바꿔가며 탐색</span></div><div><b>팬덤의 별칭과 고유 표현</b><span>동의어·불용어 관리와 원문 확인·교정</span></div></div>
+      <div class="preview-copy">
+        <div class="roleline">MY ROLE · 문제정의 · 분석구조 · UX · 직접구현</div>
+        <h4>팬 반응 수집과 해석을 하나의 의사결정 흐름으로 묶었습니다.</h4>
+        <p>KBS미디어에서 팬 반응을 모니터링하고 퍼포먼스 마케팅 업무를 하며, 여러 SNS의 데이터를 수집하고 목적마다 시각화를 다시 구성하는 불편을 겪었습니다. 두 현장에서 필요했던 기능을 직접 구현해, 수집·분석·시각화와 선택 데이터 기반 AI 질의를 한 흐름으로 연결했습니다.</p>
+      </div>
+    </div>
+
+    <details class="case-details"><summary>설계 판단과 구현 과정 자세히 보기</summary>
+    <div class="detail-grid">
+      <div class="detail"><div class="eyebrow">WHY</div><h4>수집보다 중요한 건 맥락을 잃지 않는 것</h4><p>X·YouTube·Instagram의 반응을 한곳에 모으되 계정·게시물·댓글 등 원본 유형을 유지했습니다. 어디서 나온 반응인지 알아야 해석도 달라진다고 봤습니다.</p></div>
+      <div class="detail"><div class="eyebrow">CAPTURE</div><h4>보고 있던 화면에서 필요한 반응만 바로 수집</h4><p>브라우저 탐색 흐름을 끊지 않고 필요한 데이터만 선택해 저장하도록 구성했습니다. ‘수집 도구를 따로 켜는 일’ 자체를 줄이는 데 초점을 맞췄습니다.</p></div>
+      <div class="detail"><div class="eyebrow">ANALYSIS</div><h4>하나의 점수 대신 여러 시선으로 보기</h4><p>감성 분포, 키워드, 시간 변화, 동시출현 관계망을 함께 보여줍니다. 특정 수치 하나로 팬덤을 단정하기보다 서로 다른 신호를 같이 볼 수 있게 했습니다.</p></div>
+      <div class="detail"><div class="eyebrow">GOVERNANCE</div><h4>분석 오류를 ‘모델 탓’으로 끝내지 않기</h4><p>동의어·불용어·임시 보정 규칙을 운영 화면에서 관리하도록 했습니다. 분석 결과를 그대로 믿기보다 사람이 다시 고칠 수 있는 레이어를 남겼습니다.</p></div>
+      <div class="detail"><div class="eyebrow">AI LAYER</div><h4>AI는 원본을 대신하지 않고 해석을 보조</h4><p>사용자가 먼저 데이터 범위를 선택한 뒤 그 범위 안에서 요약과 맥락 해석을 요청하도록 설계했습니다. 원본 데이터와 생성 결과도 분리해서 볼 수 있습니다.</p></div>
+      <div class="detail"><div class="eyebrow">BUILD</div><h4>수집부터 시각화까지 직접 연결</h4><p>React 대시보드와 Python/FastAPI 수집·분석 서버를 분리하고 Supabase에 연결했습니다. 분석 종류에 따라 Recharts와 force graph를 나눠 사용했습니다.</p></div>
+    </div>
+
+    <div class="arch">
+      <div class="eyebrow">HOW IT WORKS</div>
+      <div class="arch-flow">
+        <div class="arch-node"><b>01 / SOURCE</b><span>X · YouTube · Instagram</span></div>
+        <div class="arch-node"><b>02 / CAPTURE</b><span>브라우저에서 필요한 반응 수집</span></div>
+        <div class="arch-node"><b>03 / STORE</b><span>원본과 분석 데이터를 분리 저장</span></div>
+        <div class="arch-node"><b>04 / ANALYZE</b><span>감성 · 키워드 · 트렌드 · 관계망</span></div>
+        <div class="arch-node"><b>05 / INTERPRET</b><span>선택 데이터 기반 AI 질의</span></div>
+      </div>
+    </div>
+
+    <div class="tech-table">
+      <div class="tech-row"><b>FRONTEND</b><span>React 18 · Vite · Tailwind CSS · Recharts · React Force Graph</span></div>
+      <div class="tech-row"><b>BACKEND</b><span>Python · FastAPI · Supabase · kiwipiepy</span></div>
+      <div class="tech-row"><b>COLLECT</b><span>X / Twitter 수집 · YouTube comments · Instaloader</span></div>
+      <div class="tech-row"><b>DEPLOY</b><span>Vercel frontend · Render backend</span></div>
+    </div>
+    </details>
+    <a class="back-projects" href="#projects">↑ 프로젝트 목록</a>
   </div>
 </section>
 
@@ -352,6 +364,7 @@ section{padding:92px 0}
       </div>
     </div>
 
+    <details class="case-details"><summary>설계 판단과 구현 과정 자세히 보기</summary>
     <div class="detail-grid">
       <div class="detail"><div class="eyebrow">WHY</div><h4>위로에 꼭 더 많은 말이 필요한 건 아니라고 봤습니다.</h4><p>기록·분석·조언보다 그냥 흘려보내고 싶은 순간이 있다고 봤습니다. 그래서 질문을 ‘어떻게 해결할까?’에서 ‘어떻게 잠시 놓게 할까?’로 바꿨습니다.</p></div>
       <div class="detail"><div class="eyebrow">INTERACTION</div><h4>문장을 지우는 장면을 감정의 전환점으로</h4><p>텍스트 입력이 모래·파도·해파리 애니메이션으로 이어지도록 설계했습니다. 완료 메시지보다 캐릭터와 장면의 흐름이 먼저 느껴지도록 타이밍도 조정했습니다.</p></div>
@@ -367,6 +380,8 @@ section{padding:92px 0}
       <div class="tech-row"><b>DATA</b><span>Firebase · GA event funnel · local state</span></div>
       <div class="tech-row"><b>PERF</b><span>Dynamic FPS · static canvas cache · DPR cap · lazy assets</span></div>
     </div>
+    </details>
+    <a class="back-projects" href="#projects">↑ 프로젝트 목록</a>
   </div>
 </section>
 
@@ -391,6 +406,7 @@ section{padding:92px 0}
       </div>
     </div>
 
+    <details class="case-details"><summary>설계 판단과 구현 과정 자세히 보기</summary>
     <div class="detail-grid">
       <div class="detail"><div class="eyebrow">WHY</div><h4>공연 바깥의 번거로움도 팬 경험의 일부</h4><p>공연을 좋아할수록 이동·동행·현장 정보 같은 주변 일이 반복됩니다. 각각 따로 해결하는 대신 ‘같은 공연에 가는 사람’이라는 맥락으로 묶는 데서 시작했습니다.</p></div>
       <div class="detail"><div class="eyebrow">TRUST</div><h4>새 프로필보다 이미 쓰는 X 계정을 연결</h4><p>팬덤에서 실제로 관계와 활동 기록이 쌓이는 X 계정을 OAuth로 연결해 처음 만나는 사람 사이의 최소한의 맥락을 만들었습니다. 인증 로직은 서버 사이드로 분리했습니다.</p></div>
@@ -410,6 +426,8 @@ section{padding:92px 0}
         <div class="arch-node"><b>05 / OPS</b><span>Serverless API · Cron · regression tests</span></div>
       </div>
     </div>
+    </details>
+    <a class="back-projects" href="#projects">↑ 프로젝트 목록</a>
   </div>
 </section>
 
