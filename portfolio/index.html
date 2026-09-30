@@ -22,7 +22,7 @@
 window.dataLayer=window.dataLayer||[];
 function gtag(){dataLayer.push(arguments)}
 gtag("js",new Date());
-gtag("config","G-F6FELRLPHC",{page_title:"Portfolio · idealwhy"});
+gtag("config","G-F6FELRLPHC",{page_title:"박수아 | AI Product Builder Portfolio",page_path:window.location.pathname,content_group:"portfolio"});
 </script>
 <style>
 :root{--bg:#f5f3ed;--paper:#fbfaf6;--ink:#20221f;--muted:#73766e;--blue:#3157ff;--acid:#e6edbc;--line:#e0e0d9}
@@ -42,6 +42,10 @@ gtag("config","G-F6FELRLPHC",{page_title:"Portfolio · idealwhy"});
 
 .topbar .nav{display:flex;gap:28px;align-items:center;font-size:12px;color:var(--muted)}.topbar .nav a{white-space:nowrap;padding:10px 0}.topbar .nav a:hover,.topbar .nav a:focus-visible{color:var(--blue)}
 @media(max-width:600px){.topbar .wrap{width:calc(100% - 36px);gap:14px}.topbar .brand{font-size:14px}.topbar .nav{gap:14px;font-size:11px}}
+
+/* Natural paragraph wrapping without forced sentence breaks */
+.preview-copy p,.detail p,.bridge-copy p,.business-proof p,.section-head p{line-height:1.85;word-break:keep-all;overflow-wrap:break-word;text-wrap:pretty}.project-question,.hero-copy,.preview-copy h4,.detail h4{text-wrap:balance}.project-title h3{overflow-wrap:normal;word-break:keep-all}.preview-copy p{max-width:38em}.detail p{font-size:13px}.tech-row span{overflow-wrap:anywhere}
+@media(max-width:800px){.detail p{font-size:14px}.project-title h3{font-size:clamp(32px,10vw,44px)}}
 </style>
 </head>
 <body>
@@ -62,7 +66,7 @@ gtag("config","G-F6FELRLPHC",{page_title:"Portfolio · idealwhy"});
         <h1>Build<br>the <span>why.</span></h1>
       </div>
       <div>
-        <p class="profile-line">박수아 · 콘텐츠 사업에서 AI 제품까지</p><p class="hero-copy">콘텐츠 사업에서 발견한 문제를,<br>실제로 쓰이는 AI 제품으로 만듭니다.</p>
+        <p class="profile-line">박수아 · 콘텐츠 사업에서 AI 제품까지</p><p class="hero-copy">콘텐츠 사업에서 발견한 문제를, 실제로 쓰이는 AI 제품으로 만듭니다.</p>
         <p class="hero-sub">KBS미디어의 사업 경험과 퍼포먼스 마케팅에서 얻은 문제의식을 데이터 분석과 직접 구현으로 연결합니다.</p><div class="proofs"><span>콘텐츠 사업 · 마케팅 실무</span><span>AI 서비스 기획·구현·배포</span></div><div class="award-proof"><strong>대상</strong><div><b>과학기술정보통신부 장관상</b><span>리부트 AI 활용대회 · 부캐영어 개인 기획·개발·발표</span></div></div>
       </div>
     </div>
@@ -84,7 +88,7 @@ gtag("config","G-F6FELRLPHC",{page_title:"Portfolio · idealwhy"});
         <div class="meta"><span>React 19</span><span>TypeScript</span><span>Supabase</span><span>Solar LLM</span><span>Web Push</span></div>
         <a class="live" href="https://www.enmate.co.kr" target="_blank" rel="noreferrer">Open live service ↗</a>
       </div>
-      <div><div class="case-award">리부트 AI 활용대회<strong>대상 · 과학기술정보통신부 장관상</strong>개인 기획 · 구현 · 배포 · 발표</div><p class="project-question">“업무 영어는 왜 늘 공부하는 순간과<br><strong>실제로 쓰는 순간이 따로일까?</strong>”</p></div>
+      <div><div class="case-award">리부트 AI 활용대회<strong>대상 · 과학기술정보통신부 장관상</strong>개인 기획 · 구현 · 배포 · 발표</div><p class="project-question">“업무 영어는 왜 늘 공부하는 순간과 <strong>실제로 쓰는 순간이 따로일까?</strong>”</p></div>
     </div>
 
     <div class="preview">
@@ -130,11 +134,11 @@ gtag("config","G-F6FELRLPHC",{page_title:"Portfolio · idealwhy"});
     <div class="project-top">
       <div class="project-title">
         <div class="eyebrow">02 / FAN DATA · AI ANALYTICS</div>
-        <h3>Insight<br>Mate</h3>
+        <h3>InsightMate</h3>
         <div class="meta"><span>React 18</span><span>FastAPI</span><span>Supabase</span><span>Recharts</span><span>Network Graph</span></div>
         <a class="live" href="https://insightmate.idealwhy.com" target="_blank" rel="noreferrer">Open live service ↗</a>
       </div>
-      <p class="project-question">“팬 반응을 많이 보는 것과<br><strong>제대로 읽는 것은 왜 다를까?</strong>”</p>
+      <p class="project-question">“팬 반응을 많이 보는 것과 <strong>제대로 읽는 것은 왜 다를까?</strong>”</p>
     </div>
 
     <div class="preview">
@@ -182,11 +186,11 @@ gtag("config","G-F6FELRLPHC",{page_title:"Portfolio · idealwhy"});
     <div class="project-top">
       <div class="project-title">
         <div class="eyebrow">03 / INTERACTION · APPS IN TOSS</div>
-        <h3>Let It<br>Flow</h3>
+        <h3>Let It Flow</h3>
         <div class="meta"><span>TypeScript</span><span>Canvas</span><span>Apps in Toss</span><span>Firebase</span><span>Vite</span></div>
         <a class="live" href="intoss://let-it-flow">토스 앱에서 열기 ↗</a><p class="hero-sub">모바일에서 토스 앱으로 연결됩니다. PC에서는 아래 실제 서비스 화면으로 이용 흐름을 확인할 수 있습니다.</p>
       </div>
-      <p class="project-question">“모든 마음을 꼭 분석해야만<br><strong>잘 다룰 수 있는 걸까?</strong>”</p>
+      <p class="project-question">“모든 마음을 꼭 분석해야만 <strong>잘 다룰 수 있는 걸까?</strong>”</p>
     </div>
 
     <div class="preview">
@@ -222,11 +226,11 @@ gtag("config","G-F6FELRLPHC",{page_title:"Portfolio · idealwhy"});
     <div class="project-top">
       <div class="project-title">
         <div class="eyebrow">04 / FANDOM PRODUCT · LIVE SERVICE</div>
-        <h3>Deok<br>mate</h3>
+        <h3>덕메구해요</h3>
         <div class="meta"><span>React</span><span>TypeScript</span><span>Vercel</span><span>X OAuth</span><span>KOPIS API</span></div>
         <a class="live" href="https://deokmate.idealwhy.com" target="_blank" rel="noreferrer">Open live service ↗</a>
       </div>
-      <p class="project-question">“공연은 티켓을 잡는 순간이 아니라<br><strong>집을 나서는 순간부터 시작되지 않을까?</strong>”</p>
+      <p class="project-question">“공연은 티켓을 잡는 순간이 아니라 <strong>집을 나서는 순간부터 시작되지 않을까?</strong>”</p>
     </div>
 
     <div class="preview deokmate-preview">
@@ -262,8 +266,8 @@ gtag("config","G-F6FELRLPHC",{page_title:"Portfolio · idealwhy"});
 
 <section class="project" id="delivery" data-project="kbs_music"><div class="wrap">
 <div class="chapter-heading"><span>05</span><div><h2>KBS미디어 음원 유통 홈페이지</h2><p>재직 중 협업 프로젝트 · 사업 제안부터 출시까지</p></div></div>
-<div class="project-top"><div class="project-title"><div class="eyebrow">BUSINESS TO PRODUCT · KBS MEDIA</div><h3>음원 유통<br>제휴 홈페이지</h3><div class="meta"><span>사업 제안</span><span>요구사항 구체화</span><span>관계 부서 협의</span></div><a class="live" href="https://music.kbsmedia.co.kr/" target="_blank" rel="noreferrer">실제 홈페이지 보기 ↗</a></div><p class="project-question">사업에 필요한 제휴 창구를,<br><strong>실제 운영되는 서비스로 연결했습니다.</strong></p></div>
-<div class="preview"><div class="monitor"><a href="https://music.kbsmedia.co.kr/" target="_blank" rel="noreferrer"><img src="/assets/kbs-music-service.png" alt="KBS미디어 음원 유통 홈페이지 실제 첫 화면" loading="lazy"></a></div><div class="preview-copy"><div class="roleline">MY ROLE · 사업 제안 · 요구사항 정리 · 도입 협의</div><h4>개발 이후의 제약까지 풀어 출시한 협업 경험</h4><p>음원 유통 사업을 안내하고 제휴 신청을 받을 창구를 제안했습니다. 기획자와 신청 정보와 업무 절차를 구체화하고, 개인정보 처리 문제로 출시가 수개월간 보류된 뒤에는 비용과 운영 대안을 검토하며 팀장님 및 관계 부서와 협의했습니다.</p></div></div>
+<div class="project-top"><div class="project-title"><div class="eyebrow">BUSINESS TO PRODUCT · KBS MEDIA</div><h3>음원 유통<br>제휴 홈페이지</h3><div class="meta"><span>사업 제안</span><span>요구사항 구체화</span><span>관계 부서 협의</span></div><a class="live" href="https://music.kbsmedia.co.kr/" target="_blank" rel="noreferrer">실제 홈페이지 보기 ↗</a></div><p class="project-question">사업에 필요한 제휴 창구를, <strong>실제 운영되는 서비스로 연결했습니다.</strong></p></div>
+<div class="preview"><div class="monitor"><a href="https://music.kbsmedia.co.kr/" target="_blank" rel="noreferrer"><img src="/assets/kbs-music-service.png" alt="KBS미디어 음원 유통 홈페이지 실제 첫 화면" loading="lazy"></a></div><div class="preview-copy"><div class="roleline">MY ROLE · 사업 제안 · 요구사항 정리 · 도입 협의</div><h4>개발 이후의 제약까지 풀어 출시한 협업 경험</h4><p>음원 유통 사업을 안내하고 제휴 신청을 받을 창구를 제안했습니다. 기획자와 함께 신청 정보 및 업무 절차를 구체화하고, 개인정보 처리 문제로 출시가 수개월간 보류된 뒤에는 비용과 운영 대안을 검토하며 팀장님 및 관계 부서와 협의했습니다.</p></div></div>
 <div class="detail-grid"><div class="detail"><div class="eyebrow">DEFINE</div><h4>사업의 언어를 구현 기준으로</h4><p>사업 용어의 의미와 제휴 신청에 필요한 정보, 접수 이후의 처리 절차를 정리해 기획·개발 담당자와 이해를 맞췄습니다.</p></div><div class="detail"><div class="eyebrow">ALIGN</div><h4>출시를 위한 대안 마련</h4><p>기획자가 제안한 외부 서버 활용안의 비용을 계산하고 타 팀 운영 비용과 비교했습니다. 수집 항목 최소화와 사업 필요성을 바탕으로 팀장님·법무·경영·기획·개발 담당자들과 협의했습니다.</p></div><div class="detail"><div class="eyebrow">RESULT</div><h4>5개월간 제휴 문의 20건 이상</h4><p>사내 최초의 음원 유통 제휴 페이지를 출시했습니다. 별도 광고 없이 신규 제휴 문의를 받는 사업 창구로 연결했습니다.</p></div></div><a class="back-projects" href="#projects">↑ 프로젝트 목록</a>
 </div></section>
 
@@ -303,6 +307,7 @@ gtag("config","G-F6FELRLPHC",{page_title:"Portfolio · idealwhy"});
     track("portfolio_click", {
       link_text:(a.textContent||"").trim().replace(/\s+/g," ").slice(0,80),
       link_url:a.getAttribute("href")||"",
+      link_type:(a.getAttribute("href")||"").startsWith("#")?"section_navigation":"external_service",
       section:a.closest("section")?.id||"header"
     });
   });
